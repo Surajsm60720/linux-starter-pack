@@ -1,14 +1,13 @@
 from textual.app import App, ComposeResult
 from textual.widgets import Header, Input, Footer, Markdown, Button, Label, Static
-from textual.containers import VerticalScroll, Center
+from textual.containers import Container, Horizontal, VerticalScroll
 from textual.screen import Screen
 
 class DistroOption(Markdown):
     
-    def __init__(self, name: str, description: str) -> None:
-        super().__init__(f"{name}\n{description}")
+    def __init__(self, name: str) -> None:
+        super().__init__(f"{name}\n")
         self._name = name
-        self.description = description
     
     @property
     def name(self):
@@ -17,10 +16,6 @@ class DistroOption(Markdown):
     @name.setter
     def name(self, value: str):
         self._name = value
-    
-    def on_click(self) -> None:
-        self.app.selected_distro = self.name
-        self.app.notify(f"You selected: {self.name}")
 
 
 class DistroSelectScreen(Screen):
@@ -33,26 +28,66 @@ class DistroSelectScreen(Screen):
         padding: 1 2;
         text-style: bold;
     }
+
+    #app-grid {
+    layout: grid;
+    grid-size: 2;  /* two columns */
+    grid-columns: 1fr;
+    grid-rows: 1fr;
+    }
+
+    #left-pane {
+        align: center middle;
+        width: 100%;
+        height: 100%;
+        row-span: 1;
+        border: dodgerblue;
+        opacity: 100%;
+    }
+
+    #top-right {       
+        background: $panel;
+        height: 100%;
+        background: $panel;
+        border: mediumvioletred;
+    }
     """
-    
-    BINDINGS = [("escape", "go_back", "Back to Welcome")]
-    
+
     def compose(self) -> ComposeResult:
-        yield Label("Select Your Linux Distribution", id="selection-title")
-        
-        with VerticalScroll(id="distro-list"):
-            yield DistroOption("Ubuntu", "Popular desktop distribution based on Debian")
-            yield DistroOption("Fedora", "Community distribution sponsored by Red Hat")
-            yield DistroOption("Arch Linux", "Lightweight and flexible Linux distribution")
-            yield DistroOption("Debian", "Stable distribution that's the base for many others")
-            yield DistroOption("Linux Mint", "User-friendly desktop distribution")
-            yield DistroOption("openSUSE", "Stable and complete Linux distribution")
-            yield DistroOption("CentOS", "Enterprise-class Linux Distribution derived from RHEL")
-            yield DistroOption("Manjaro", "User-friendly Arch-based distribution")
-            yield DistroOption("Elementary OS", "Fast and open replacement for Windows and macOS")
-            yield DistroOption("Pop!_OS", "Ubuntu-based distro by System76")
+        yield Static("One", classes="box")
+        yield Static("Two", classes="box")
+
+    BINDINGS = [("escape", "go_back", "Back to Welcome"),
+                ("q", "quit", "Quit"),
+                ("up", "select_previous", "Select Previous Distro"),
+                ("down", "select_next", "Select Next Distro"),]
+    
+    def action_quit(self) -> None:
+        self.app.exit()
+
+    def action_go_back(self) -> None:
+        self.app.pop_screen()   
+      
+    def action_select_previous(self) -> None:
+        """Select the previous distro option."""
+        if self.selected_index > 0:
+            self.selected_index -= 1
+            self.update_selection()
+
+    def action_select_next(self) -> None:
+        """Select the next distro option."""
+        if self.selected_index < len(self.distro_options) - 1:
+            self.selected_index += 1
+            self.update_selection()
+
+    def compose(self) -> ComposeResult:
+        with Container(id="app-grid"):
+            with VerticalScroll(id="left-pane"):
+                yield DistroOption("Ubuntu")
+                yield DistroOption("Debian")
+                yield DistroOption("Fedora")
+                yield DistroOption("Arch")
+            with Horizontal(id="top-right"):
+                yield Static("Horizontally")
         
         yield Footer()
-    
-    def action_go_back(self) -> None:
-        self.app.pop_screen()
