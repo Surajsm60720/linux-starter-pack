@@ -3,6 +3,9 @@ from textual.widgets import Header, Input, Footer, Markdown, Button, Label, Stat
 from textual.containers import VerticalScroll, Center
 from textual.screen import Screen
 from distro import DistroOption, DistroSelectScreen
+import pyfiglet
+
+ascii_text = pyfiglet.figlet_format("Linux Starter Pack", font = "stop")
 
 class WelcomeScreen(Screen):
 
@@ -20,7 +23,7 @@ class WelcomeScreen(Screen):
     def compose(self) -> ComposeResult:
         
         with Center():
-            yield Label("Linux Starter Pack", id="title")
+            yield Label(ascii_text,id="title")
             yield Label("A quick way to install packages in your Linux system", id="subtitle")
         
         yield Footer()
@@ -31,9 +34,10 @@ class App(App):
 
     CSS = """
     #title {
+        align: center middle;
         text-align: center;
-        text-style: bold;
-        color: $accent;
+        color: lightseagreen;
+        width: 100%;
         margin: 1 0;
     }
 
@@ -42,6 +46,7 @@ class App(App):
         text-style: bold;
         color: $text;
         margin: 1 0;
+        width: 100%;
     }
     """
 
