@@ -1,27 +1,23 @@
 from textual.app import App, ComposeResult
-from textual.widgets import Header, Input, Footer, Markdown, Button, Label, Static
+from textual.widgets import Footer, Markdown, Static
 from textual.containers import Container, Horizontal, VerticalScroll
 from textual.screen import Screen
+from textual.reactive import reactive
+from info import DISTRO_FACTS
 
 class DistroOption(Markdown):
-    
+
     def __init__(self, name: str) -> None:
-        super().__init__(f"{name}\n")
-        self._name = name
-    
-    @property
-    def name(self):
+        super().__init__(f"**{name}**\n")
+        self._name = name  
+
+    def get_name(self) -> str:
         return self._name
-
-    @name.setter
-    def name(self, value: str):
-        self._name = value
-
 
 class DistroSelectScreen(Screen):
 
     CSS = """
-    #DistroOption {
+    #distro-option {
         background: $primary 10%;
         color: $text;
         margin: 1;
@@ -30,64 +26,84 @@ class DistroSelectScreen(Screen):
     }
 
     #app-grid {
-    layout: grid;
-    grid-size: 2;  /* two columns */
-    grid-columns: 1fr;
-    grid-rows: 1fr;
+        layout: grid;
+        grid-size: 2;
+        grid-columns: 1fr 2fr;
+        grid-rows: 1fr;
+        height: 100%;
     }
 
     #left-pane {
-        align: center middle;
         width: 100%;
         height: 100%;
-        row-span: 1;
         border: dodgerblue;
-        opacity: 100%;
     }
 
     #top-right {       
         background: $panel;
         height: 100%;
-        background: $panel;
         border: mediumvioletred;
+        padding: 1;
+    }
+
+    .selected {
+        background: $primary 50%;
     }
     """
 
+    selected_index = reactive(0) 
+
     def compose(self) -> ComposeResult:
-        yield Static("One", classes="box")
-        yield Static("Two", classes="box")
+        with Container(id="app-grid"):
+            with VerticalScroll(id="left-pane"):
+                self.distro_options = [
+                    DistroOption(name) for name in DISTRO_FACTS.keys()
+                ]
+                for option in self.distro_options:
+                    yield option
+            with Horizontal(id="top-right"):
+                self.facts_panel = Static(self.get_selected_fact(), id="facts")
+                yield self.facts_panel
+        
+        yield Footer()
 
-    BINDINGS = [("escape", "go_back", "Back to Welcome"),
-                ("q", "quit", "Quit"),
-                ("up", "select_previous", "Select Previous Distro"),
-                ("down", "select_next", "Select Next Distro"),]
-    
-    def action_quit(self) -> None:
-        self.app.exit()
+    BINDINGS = [
+        ("escape", "go_back", "Back to Welcome"),
+        ("q", "quit", "Quit"),
+        ("up", "select_previous", "Select Previous Distro"),
+        ("down", "select_next", "Select Next Distro"),
+    ]
 
-    def action_go_back(self) -> None:
-        self.app.pop_screen()   
-      
+    def get_selected_fact(self) -> str:
+        return DISTRO_FACTS[list(DISTRO_FACTS.keys())[self.selected_index]]
+
+    def update_selection(self) -> None:
+        for i, option in enumerate(self.distro_options):
+            option.remove_class("selected")
+        self.distro_options[self.selected_index].add_class("selected")
+
+        self.facts_panel.update(self.get_selected_fact())
+
     def action_select_previous(self) -> None:
-        """Select the previous distro option."""
         if self.selected_index > 0:
             self.selected_index -= 1
             self.update_selection()
 
     def action_select_next(self) -> None:
-        """Select the next distro option."""
         if self.selected_index < len(self.distro_options) - 1:
             self.selected_index += 1
             self.update_selection()
 
-    def compose(self) -> ComposeResult:
-        with Container(id="app-grid"):
-            with VerticalScroll(id="left-pane"):
-                yield DistroOption("Ubuntu")
-                yield DistroOption("Debian")
-                yield DistroOption("Fedora")
-                yield DistroOption("Arch")
-            with Horizontal(id="top-right"):
-                yield Static("Horizontally")
-        
-        yield Footer()
+    def action_quit(self) -> None:
+        self.app.exit()
+
+    def action_go_back(self) -> None:
+        self.app.pop_screen()
+
+class DistroApp(App):
+
+    def on_mount(self) -> None:
+        self.push_screen(DistroSelectScreen())
+
+if __name__ == "__main__":
+    DistroApp().run()
