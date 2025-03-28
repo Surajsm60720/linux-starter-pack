@@ -81,6 +81,13 @@ class PackageSelectorScreen(Screen):
                 yield Static("Here comes app cart items")
 
         yield Footer()
+    
+    BINDINGS=[
+        ("escape", "go_back", "Back to Distro selection"),
+        ("q", "quit", "Quit"),
+        ("up", "select_previous", "Select Previous Package"),
+        ("down", "select_next", "Select Next Package"),
+    ]
 
     def get_selected_command(self) -> str:
         package_name = list(PACKAGE_LIST[self.selected_distro].keys())[self.selected_index]
@@ -102,6 +109,9 @@ class PackageSelectorScreen(Screen):
         if self.selected_index < len(self.package_options) - 1:
             self.selected_index += 1
             self.update_selection()
+    
+    def action_quit(self) -> None:
+        self.app.exit()
 
     def action_go_back(self) -> None:
         self.app.pop_screen()
