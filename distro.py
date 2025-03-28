@@ -1,18 +1,20 @@
-from textual.app import App, ComposeResult
+from textual.app import ComposeResult
 from textual.widgets import Footer, Markdown, Static
 from textual.containers import Container, Horizontal, VerticalScroll
 from textual.screen import Screen
 from textual.reactive import reactive
 from info import DISTRO_FACTS
+from package_select import PackageSelectorScreen
+
 
 class DistroOption(Markdown):
-
     def __init__(self, name: str) -> None:
         super().__init__(f"**{name}**\n")
-        self._name = name  
+        self._name = name
 
     def get_name(self) -> str:
         return self._name
+
 
 class DistroSelectScreen(Screen):
 
@@ -51,7 +53,7 @@ class DistroSelectScreen(Screen):
     }
     """
 
-    selected_index = reactive(0) 
+    selected_index = reactive(0)
 
     def compose(self) -> ComposeResult:
         with Container(id="app-grid"):
@@ -64,7 +66,7 @@ class DistroSelectScreen(Screen):
             with Horizontal(id="top-right"):
                 self.facts_panel = Static(self.get_selected_fact(), id="facts")
                 yield self.facts_panel
-        
+
         yield Footer()
 
     BINDINGS = [
@@ -72,6 +74,7 @@ class DistroSelectScreen(Screen):
         ("q", "quit", "Quit"),
         ("up", "select_previous", "Select Previous Distro"),
         ("down", "select_next", "Select Next Distro"),
+        ("enter", "select_distro", "Select Distro"),
     ]
 
     def get_selected_fact(self) -> str:
@@ -94,16 +97,15 @@ class DistroSelectScreen(Screen):
             self.selected_index += 1
             self.update_selection()
 
+    def action_select_distro(self) -> None:
+        selected_distro = list(DISTRO_FACTS.keys())[self.selected_index]
+        package_screen = PackageSelectorScreen()
+        package_screen.selected_distro = selected_distro
+        self.app.push_screen(package_screen)
+
     def action_quit(self) -> None:
         self.app.exit()
 
     def action_go_back(self) -> None:
         self.app.pop_screen()
 
-class DistroApp(App):
-
-    def on_mount(self) -> None:
-        self.push_screen(DistroSelectScreen())
-
-if __name__ == "__main__":
-    DistroApp().run()
