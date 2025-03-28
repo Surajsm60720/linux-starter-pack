@@ -76,7 +76,7 @@ PACKAGE_LIST = {
         "Python 3": "sudo pacman -S python",
         "Vim": "sudo pacman -S vim",
     },
-    "Arch": {
+    "Arch Linux": {
         "Git": "sudo pacman -S git",
         "Node.js": "sudo pacman -S nodejs",
         "Docker": "sudo pacman -S docker",

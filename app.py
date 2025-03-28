@@ -10,7 +10,7 @@ ascii_text = pyfiglet.figlet_format("Linux Starter Pack", font = "stop")
 class WelcomeScreen(Screen):
 
     BINDINGS = [
-        ("n", "distro_select", "Next Screen"),
+        ("enter", "distro_select", "Next Screen"),
         ("q", "quit", "Quit")
     ]
     

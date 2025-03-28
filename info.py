@@ -59,7 +59,7 @@ DISTRO_FACTS = {
     - dnf Package Manager: Efficient, secure, and supports modular packages.
     - Immutable Fedora Silverblue Variant: Ideal for container-based development.""",
 
-    "Nobara OS": """
+    "Nobara": """
     - Optimized for Gaming: Pre-installed with Proton, Wine, and gaming drivers.
     - Fedora-Based Stability: Uses Fedora’s core but adds gaming tweaks.
     - Media Codecs Pre-installed: Plays all formats without extra setup.

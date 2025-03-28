@@ -53,11 +53,6 @@ class PackageSelectorScreen(Screen):
         border: greenyellow;
     }
 
-    #bottom-right > Static {
-        height: 100%;
-        background: $boost;
-    }
-
     .selected {
         background: $primary 50%;
     }
