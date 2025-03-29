@@ -4,20 +4,23 @@ Linux, or sometimes as I like to call the OS where you are not just a user but a
 in terms of even some basic features like the package managers to download the softwares between the plethora of distributions that its 
 community has to offer.
 
-### Major goal to build the project
+## Major goal to build the project
 
 - Help the newbies install and familiarise them with the environment of Linux terminal and most used commands.
-- Cater to the power users who want to have the ability to have a single bash file to install some mostly used softwares.
+- Cater to the power users who want to have the ability to have a single bash file to install some mostly used softwares.#
+
+## Getting started
 
 1. Clone the repository:
    ```bash
+    cd Downloads
     git clone https://github.com/Surajsm60720/linux-starter-pack.git
    ```
    Or simply download the file.
 
 2. Run the following command in the terminal:
    ```bash
-   cd Downloads/linux-starter-pack
+   cd /linux-starter-pack
    pip install -r requirements.txt
    python3 app.py
    ```

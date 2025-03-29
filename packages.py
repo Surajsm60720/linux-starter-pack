@@ -1,86 +1,805 @@
 PACKAGE_LIST = {
     "Ubuntu": {
-        "Git": "sudo apt install git",
-        "Node.js": "sudo apt install nodejs",
-        "Docker": "sudo apt install docker.io",
-        "Python 3": "sudo apt install python3",
-        "Vim": "sudo apt install vim",
+        "Git": 
+            "command: sudo apt install git\n"
+            "description:\n"
+                "Git is a distributed version control system that tracks changes in source code. "
+                "On Ubuntu, Git is widely used by developers to collaborate on projects, manage code revisions, and handle branching and merging. "
+                "After installation, remember to configure your user name and email with Git. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Collaborating on open-source projects\n"
+                "- Managing personal projects and code histories\n"
+                "- Integrating with CI/CD pipelines\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `git --version`\n"
+                "- Basic config: `git config --global user.name 'Your Name'` and `git config --global user.email 'you@example.com'`",
+        "Node.js": 
+            "command: sudo apt install nodejs\n"
+            "description:\n"
+                "Node.js is a JavaScript runtime that allows developers to execute JavaScript outside of the browser. "
+                "On Ubuntu, it's used for backend development, building APIs, and creating real-time applications. "
+                "It comes with npm (Node Package Manager) to manage dependencies efficiently. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Server-side web application development\n"
+                "- Real-time data processing\n"
+                "- Building scalable network applications\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `node -v`\n"
+                "- Install npm if needed: `sudo apt install npm`",
+        "Docker":
+            "command: sudo apt install docker.io\n"
+            "description: \n"
+                "Docker is a containerization platform that packages software and its dependencies into portable containers. "
+                "On Ubuntu, Docker helps ensure consistency across development, testing, and production environments by isolating applications. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Deploying microservices\n"
+                "- Simplifying application distribution\n"
+                "- Streamlining development environments\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `docker --version`\n"
+                "- Enable and start service: `sudo systemctl enable --now docker`\n"
+                "- Test run: `sudo docker run hello-world`",
+        "Python 3": 
+            "command: sudo apt install python3\n"
+            "description: \n"
+                "Python 3 is a high-level programming language renowned for its readability and versatility. "
+                "On Ubuntu, it is used for web development, automation, data analysis, and much more. "
+                "Its extensive library ecosystem makes Python ideal for both beginners and professionals. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Web development (using frameworks like Django or Flask)\n"
+                "- Data analysis and machine learning\n"
+                "- Scripting and automation tasks\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `python3 --version`\n"
+                "- Use pip for additional libraries: `sudo apt install python3-pip`",
+        "Vim": 
+            "command: sudo apt install vim\n"
+            "description:\n"
+                "Vim is a highly efficient text editor that operates within the terminal, offering powerful editing and customization features. "
+                "On Ubuntu, Vim is favored by programmers and system administrators for its speed and extensive plugin ecosystem. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Code editing and scripting\n"
+                "- Remote server administration\n"
+                "- Quick file edits\n"
+                "\n⚡ Extra Notes:\n"
+                "- Open Vim: `vim filename`\n"
+                "- Save and exit: press `Esc` then type `:wq`\n"
+                "- Learn the basics with `vimtutor`",
     },
     "Debian": {
-        "Git": "sudo apt install git",
-        "Node.js": "sudo apt install nodejs",
-        "Docker": "sudo apt install docker.io",
-        "Python 3": "sudo apt install python3",
-        "Vim": "sudo apt install vim",
+        "Git": 
+            "command: sudo apt install git\n"
+            "description:\n"
+                "Git is a distributed version control system that tracks changes in source code. "
+                "On Ubuntu, Git is widely used by developers to collaborate on projects, manage code revisions, and handle branching and merging. "
+                "After installation, remember to configure your user name and email with Git. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Collaborating on open-source projects\n"
+                "- Managing personal projects and code histories\n"
+                "- Integrating with CI/CD pipelines\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `git --version`\n"
+                "- Basic config: `git config --global user.name 'Your Name'` and `git config --global user.email 'you@example.com'`",
+        "Node.js": 
+            "command: sudo apt install nodejs\n"
+            "description:\n"
+                "Node.js is a JavaScript runtime that allows developers to execute JavaScript outside of the browser. "
+                "On Ubuntu, it's used for backend development, building APIs, and creating real-time applications. "
+                "It comes with npm (Node Package Manager) to manage dependencies efficiently. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Server-side web application development\n"
+                "- Real-time data processing\n"
+                "- Building scalable network applications\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `node -v`\n"
+                "- Install npm if needed: `sudo apt install npm`",
+        "Docker":
+            "command: sudo apt install docker.io\n"
+            "description: \n"
+                "Docker is a containerization platform that packages software and its dependencies into portable containers. "
+                "On Ubuntu, Docker helps ensure consistency across development, testing, and production environments by isolating applications. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Deploying microservices\n"
+                "- Simplifying application distribution\n"
+                "- Streamlining development environments\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `docker --version`\n"
+                "- Enable and start service: `sudo systemctl enable --now docker`\n"
+                "- Test run: `sudo docker run hello-world`",
+        "Python 3": 
+            "command: sudo apt install python3\n"
+            "description: \n"
+                "Python 3 is a high-level programming language renowned for its readability and versatility. "
+                "On Ubuntu, it is used for web development, automation, data analysis, and much more. "
+                "Its extensive library ecosystem makes Python ideal for both beginners and professionals. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Web development (using frameworks like Django or Flask)\n"
+                "- Data analysis and machine learning\n"
+                "- Scripting and automation tasks\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `python3 --version`\n"
+                "- Use pip for additional libraries: `sudo apt install python3-pip`",
+        "Vim": 
+            "command: sudo apt install vim\n"
+            "description:\n"
+                "Vim is a highly efficient text editor that operates within the terminal, offering powerful editing and customization features. "
+                "On Ubuntu, Vim is favored by programmers and system administrators for its speed and extensive plugin ecosystem. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Code editing and scripting\n"
+                "- Remote server administration\n"
+                "- Quick file edits\n"
+                "\n⚡ Extra Notes:\n"
+                "- Open Vim: `vim filename`\n"
+                "- Save and exit: press `Esc` then type `:wq`\n"
+                "- Learn the basics with `vimtutor`",
     },
     "Linux Mint": {
-        "Git": "sudo apt install git",
-        "Node.js": "sudo apt install nodejs",
-        "Docker": "sudo apt install docker.io",
-        "Python 3": "sudo apt install python3",
-        "Vim": "sudo apt install vim",
+        "Git": 
+            "command: sudo apt install git\n"
+            "description:\n"
+                "Git is a distributed version control system that tracks changes in source code. "
+                "On Ubuntu, Git is widely used by developers to collaborate on projects, manage code revisions, and handle branching and merging. "
+                "After installation, remember to configure your user name and email with Git. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Collaborating on open-source projects\n"
+                "- Managing personal projects and code histories\n"
+                "- Integrating with CI/CD pipelines\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `git --version`\n"
+                "- Basic config: `git config --global user.name 'Your Name'` and `git config --global user.email 'you@example.com'`",
+        "Node.js": 
+            "command: sudo apt install nodejs\n"
+            "description:\n"
+                "Node.js is a JavaScript runtime that allows developers to execute JavaScript outside of the browser. "
+                "On Ubuntu, it's used for backend development, building APIs, and creating real-time applications. "
+                "It comes with npm (Node Package Manager) to manage dependencies efficiently. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Server-side web application development\n"
+                "- Real-time data processing\n"
+                "- Building scalable network applications\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `node -v`\n"
+                "- Install npm if needed: `sudo apt install npm`",
+        "Docker":
+            "command: sudo apt install docker.io\n"
+            "description: \n"
+                "Docker is a containerization platform that packages software and its dependencies into portable containers. "
+                "On Ubuntu, Docker helps ensure consistency across development, testing, and production environments by isolating applications. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Deploying microservices\n"
+                "- Simplifying application distribution\n"
+                "- Streamlining development environments\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `docker --version`\n"
+                "- Enable and start service: `sudo systemctl enable --now docker`\n"
+                "- Test run: `sudo docker run hello-world`",
+        "Python 3": 
+            "command: sudo apt install python3\n"
+            "description: \n"
+                "Python 3 is a high-level programming language renowned for its readability and versatility. "
+                "On Ubuntu, it is used for web development, automation, data analysis, and much more. "
+                "Its extensive library ecosystem makes Python ideal for both beginners and professionals. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Web development (using frameworks like Django or Flask)\n"
+                "- Data analysis and machine learning\n"
+                "- Scripting and automation tasks\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `python3 --version`\n"
+                "- Use pip for additional libraries: `sudo apt install python3-pip`",
+        "Vim": 
+            "command: sudo apt install vim\n"
+            "description:\n"
+                "Vim is a highly efficient text editor that operates within the terminal, offering powerful editing and customization features. "
+                "On Ubuntu, Vim is favored by programmers and system administrators for its speed and extensive plugin ecosystem. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Code editing and scripting\n"
+                "- Remote server administration\n"
+                "- Quick file edits\n"
+                "\n⚡ Extra Notes:\n"
+                "- Open Vim: `vim filename`\n"
+                "- Save and exit: press `Esc` then type `:wq`\n"
+                "- Learn the basics with `vimtutor`",
     },
     "Pop!_OS": {
-        "Git": "sudo apt install git",
-        "Node.js": "sudo apt install nodejs",
-        "Docker": "sudo apt install docker.io",
-        "Python 3": "sudo apt install python3",
-        "Vim": "sudo apt install vim",
+        "Git": 
+            "command: sudo apt install git\n"
+            "description:\n"
+                "Git is a distributed version control system that tracks changes in source code. "
+                "On Ubuntu, Git is widely used by developers to collaborate on projects, manage code revisions, and handle branching and merging. "
+                "After installation, remember to configure your user name and email with Git. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Collaborating on open-source projects\n"
+                "- Managing personal projects and code histories\n"
+                "- Integrating with CI/CD pipelines\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `git --version`\n"
+                "- Basic config: `git config --global user.name 'Your Name'` and `git config --global user.email 'you@example.com'`",
+        "Node.js": 
+            "command: sudo apt install nodejs\n"
+            "description:\n"
+                "Node.js is a JavaScript runtime that allows developers to execute JavaScript outside of the browser. "
+                "On Ubuntu, it's used for backend development, building APIs, and creating real-time applications. "
+                "It comes with npm (Node Package Manager) to manage dependencies efficiently. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Server-side web application development\n"
+                "- Real-time data processing\n"
+                "- Building scalable network applications\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `node -v`\n"
+                "- Install npm if needed: `sudo apt install npm`",
+        "Docker":
+            "command: sudo apt install docker.io\n"
+            "description: \n"
+                "Docker is a containerization platform that packages software and its dependencies into portable containers. "
+                "On Ubuntu, Docker helps ensure consistency across development, testing, and production environments by isolating applications. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Deploying microservices\n"
+                "- Simplifying application distribution\n"
+                "- Streamlining development environments\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `docker --version`\n"
+                "- Enable and start service: `sudo systemctl enable --now docker`\n"
+                "- Test run: `sudo docker run hello-world`",
+        "Python 3": 
+            "command: sudo apt install python3\n"
+            "description: \n"
+                "Python 3 is a high-level programming language renowned for its readability and versatility. "
+                "On Ubuntu, it is used for web development, automation, data analysis, and much more. "
+                "Its extensive library ecosystem makes Python ideal for both beginners and professionals. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Web development (using frameworks like Django or Flask)\n"
+                "- Data analysis and machine learning\n"
+                "- Scripting and automation tasks\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `python3 --version`\n"
+                "- Use pip for additional libraries: `sudo apt install python3-pip`",
+        "Vim": 
+            "command: sudo apt install vim\n"
+            "description:\n"
+                "Vim is a highly efficient text editor that operates within the terminal, offering powerful editing and customization features. "
+                "On Ubuntu, Vim is favored by programmers and system administrators for its speed and extensive plugin ecosystem. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Code editing and scripting\n"
+                "- Remote server administration\n"
+                "- Quick file edits\n"
+                "\n⚡ Extra Notes:\n"
+                "- Open Vim: `vim filename`\n"
+                "- Save and exit: press `Esc` then type `:wq`\n"
+                "- Learn the basics with `vimtutor`",
     },
     "Zorin OS": {
-        "Git": "sudo apt install git",
-        "Node.js": "sudo apt install nodejs",
-        "Docker": "sudo apt install docker.io",
-        "Python 3": "sudo apt install python3",
-        "Vim": "sudo apt install vim",
+        "Git": 
+            "command: sudo apt install git\n"
+            "description:\n"
+                "Git is a distributed version control system that tracks changes in source code. "
+                "On Ubuntu, Git is widely used by developers to collaborate on projects, manage code revisions, and handle branching and merging. "
+                "After installation, remember to configure your user name and email with Git. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Collaborating on open-source projects\n"
+                "- Managing personal projects and code histories\n"
+                "- Integrating with CI/CD pipelines\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `git --version`\n"
+                "- Basic config: `git config --global user.name 'Your Name'` and `git config --global user.email 'you@example.com'`",
+        "Node.js": 
+            "command: sudo apt install nodejs\n"
+            "description:\n"
+                "Node.js is a JavaScript runtime that allows developers to execute JavaScript outside of the browser. "
+                "On Ubuntu, it's used for backend development, building APIs, and creating real-time applications. "
+                "It comes with npm (Node Package Manager) to manage dependencies efficiently. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Server-side web application development\n"
+                "- Real-time data processing\n"
+                "- Building scalable network applications\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `node -v`\n"
+                "- Install npm if needed: `sudo apt install npm`",
+        "Docker":
+            "command: sudo apt install docker.io\n"
+            "description: \n"
+                "Docker is a containerization platform that packages software and its dependencies into portable containers. "
+                "On Ubuntu, Docker helps ensure consistency across development, testing, and production environments by isolating applications. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Deploying microservices\n"
+                "- Simplifying application distribution\n"
+                "- Streamlining development environments\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `docker --version`\n"
+                "- Enable and start service: `sudo systemctl enable --now docker`\n"
+                "- Test run: `sudo docker run hello-world`",
+        "Python 3": 
+            "command: sudo apt install python3\n"
+            "description: \n"
+                "Python 3 is a high-level programming language renowned for its readability and versatility. "
+                "On Ubuntu, it is used for web development, automation, data analysis, and much more. "
+                "Its extensive library ecosystem makes Python ideal for both beginners and professionals. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Web development (using frameworks like Django or Flask)\n"
+                "- Data analysis and machine learning\n"
+                "- Scripting and automation tasks\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `python3 --version`\n"
+                "- Use pip for additional libraries: `sudo apt install python3-pip`",
+        "Vim": 
+            "command: sudo apt install vim\n"
+            "description:\n"
+                "Vim is a highly efficient text editor that operates within the terminal, offering powerful editing and customization features. "
+                "On Ubuntu, Vim is favored by programmers and system administrators for its speed and extensive plugin ecosystem. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Code editing and scripting\n"
+                "- Remote server administration\n"
+                "- Quick file edits\n"
+                "\n⚡ Extra Notes:\n"
+                "- Open Vim: `vim filename`\n"
+                "- Save and exit: press `Esc` then type `:wq`\n"
+                "- Learn the basics with `vimtutor`",
     },
     "Fedora Workstation": {
-        "Git": "sudo dnf install git",
-        "Node.js": "sudo dnf install nodejs",
-        "Docker": "sudo dnf install docker",
-        "Python 3": "sudo dnf install python3",
-        "Vim": "sudo dnf install vim",
+        "Git": 
+            "command: sudo dnf install git\n"
+            "description:\n"
+                "Git is a distributed version control system that tracks changes in source code. "
+                "On Ubuntu, Git is widely used by developers to collaborate on projects, manage code revisions, and handle branching and merging. "
+                "After installation, remember to configure your user name and email with Git. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Collaborating on open-source projects\n"
+                "- Managing personal projects and code histories\n"
+                "- Integrating with CI/CD pipelines\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `git --version`\n"
+                "- Basic config: `git config --global user.name 'Your Name'` and `git config --global user.email 'you@example.com'`",
+        "Node.js": 
+            "command: sudo dnf install nodejs\n"
+            "description:\n"
+                "Node.js is a JavaScript runtime that allows developers to execute JavaScript outside of the browser. "
+                "On Ubuntu, it's used for backend development, building APIs, and creating real-time applications. "
+                "It comes with npm (Node Package Manager) to manage dependencies efficiently. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Server-side web application development\n"
+                "- Real-time data processing\n"
+                "- Building scalable network applications\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `node -v`\n"
+                "- Install npm if needed: `sudo apt install npm`",
+        "Docker":
+            "command: sudo dnf install docker.io\n"
+            "description: \n"
+                "Docker is a containerization platform that packages software and its dependencies into portable containers. "
+                "On Ubuntu, Docker helps ensure consistency across development, testing, and production environments by isolating applications. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Deploying microservices\n"
+                "- Simplifying application distribution\n"
+                "- Streamlining development environments\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `docker --version`\n"
+                "- Enable and start service: `sudo systemctl enable --now docker`\n"
+                "- Test run: `sudo docker run hello-world`",
+        "Python 3": 
+            "command: sudo dnf install python3\n"
+            "description: \n"
+                "Python 3 is a high-level programming language renowned for its readability and versatility. "
+                "On Ubuntu, it is used for web development, automation, data analysis, and much more. "
+                "Its extensive library ecosystem makes Python ideal for both beginners and professionals. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Web development (using frameworks like Django or Flask)\n"
+                "- Data analysis and machine learning\n"
+                "- Scripting and automation tasks\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `python3 --version`\n"
+                "- Use pip for additional libraries: `sudo apt install python3-pip`",
+        "Vim": 
+            "command: sudo dnf install vim\n"
+            "description:\n"
+                "Vim is a highly efficient text editor that operates within the terminal, offering powerful editing and customization features. "
+                "On Ubuntu, Vim is favored by programmers and system administrators for its speed and extensive plugin ecosystem. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Code editing and scripting\n"
+                "- Remote server administration\n"
+                "- Quick file edits\n"
+                "\n⚡ Extra Notes:\n"
+                "- Open Vim: `vim filename`\n"
+                "- Save and exit: press `Esc` then type `:wq`\n"
+                "- Learn the basics with `vimtutor`",
     },
     "Nobara": {
-        "Git": "sudo dnf install git",
-        "Node.js": "sudo dnf install nodejs",
-        "Docker": "sudo dnf install docker",
-        "Python 3": "sudo dnf install python3",
-        "Vim": "sudo dnf install vim",
-    },
+        "Git": 
+            "command: sudo dnf install git\n"
+            "description:\n"
+                "Git is a distributed version control system that tracks changes in source code. "
+                "On Ubuntu, Git is widely used by developers to collaborate on projects, manage code revisions, and handle branching and merging. "
+                "After installation, remember to configure your user name and email with Git. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Collaborating on open-source projects\n"
+                "- Managing personal projects and code histories\n"
+                "- Integrating with CI/CD pipelines\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `git --version`\n"
+                "- Basic config: `git config --global user.name 'Your Name'` and `git config --global user.email 'you@example.com'`",
+        "Node.js": 
+            "command: sudo dnf install nodejs\n"
+            "description:\n"
+                "Node.js is a JavaScript runtime that allows developers to execute JavaScript outside of the browser. "
+                "On Ubuntu, it's used for backend development, building APIs, and creating real-time applications. "
+                "It comes with npm (Node Package Manager) to manage dependencies efficiently. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Server-side web application development\n"
+                "- Real-time data processing\n"
+                "- Building scalable network applications\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `node -v`\n"
+                "- Install npm if needed: `sudo apt install npm`",
+        "Docker":
+            "command: sudo dnf install docker.io\n"
+            "description: \n"
+                "Docker is a containerization platform that packages software and its dependencies into portable containers. "
+                "On Ubuntu, Docker helps ensure consistency across development, testing, and production environments by isolating applications. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Deploying microservices\n"
+                "- Simplifying application distribution\n"
+                "- Streamlining development environments\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `docker --version`\n"
+                "- Enable and start service: `sudo systemctl enable --now docker`\n"
+                "- Test run: `sudo docker run hello-world`",
+        "Python 3": 
+            "command: sudo dnf install python3\n"
+            "description: \n"
+                "Python 3 is a high-level programming language renowned for its readability and versatility. "
+                "On Ubuntu, it is used for web development, automation, data analysis, and much more. "
+                "Its extensive library ecosystem makes Python ideal for both beginners and professionals. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Web development (using frameworks like Django or Flask)\n"
+                "- Data analysis and machine learning\n"
+                "- Scripting and automation tasks\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `python3 --version`\n"
+                "- Use pip for additional libraries: `sudo apt install python3-pip`",
+        "Vim": 
+            "command: sudo dnf install vim\n"
+            "description:\n"
+                "Vim is a highly efficient text editor that operates within the terminal, offering powerful editing and customization features. "
+                "On Ubuntu, Vim is favored by programmers and system administrators for its speed and extensive plugin ecosystem. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Code editing and scripting\n"
+                "- Remote server administration\n"
+                "- Quick file edits\n"
+                "\n⚡ Extra Notes:\n"
+                "- Open Vim: `vim filename`\n"
+                "- Save and exit: press `Esc` then type `:wq`\n"
+                "- Learn the basics with `vimtutor`",    },
     "NixOS": {
-        "Git": "nix-env -iA nixpkgs.git",
-        "Node.js": "nix-env -iA nixpkgs.nodejs",
-        "Docker": "nix-env -iA nixpkgs.docker",
-        "Python 3": "nix-env -iA nixpkgs.python3",
-        "Vim": "nix-env -iA nixpkgs.vim",
+        "Git": 
+            "command: nix-env -iA nixpkgs.git\n"
+            "description:\n"
+                "Git is a distributed version control system that tracks changes in source code. "
+                "On Ubuntu, Git is widely used by developers to collaborate on projects, manage code revisions, and handle branching and merging. "
+                "After installation, remember to configure your user name and email with Git. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Collaborating on open-source projects\n"
+                "- Managing personal projects and code histories\n"
+                "- Integrating with CI/CD pipelines\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `git --version`\n"
+                "- Basic config: `git config --global user.name 'Your Name'` and `git config --global user.email 'you@example.com'`",
+        "Node.js": 
+            "command: nix-env -iA nixpkgs.nodejs\n"
+            "description:\n"
+                "Node.js is a JavaScript runtime that allows developers to execute JavaScript outside of the browser. "
+                "On Ubuntu, it's used for backend development, building APIs, and creating real-time applications. "
+                "It comes with npm (Node Package Manager) to manage dependencies efficiently. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Server-side web application development\n"
+                "- Real-time data processing\n"
+                "- Building scalable network applications\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `node -v`\n"
+                "- Install npm if needed: `sudo apt install npm`",
+        "Docker":
+            "command: nix-env -iA nixpkgs.docker\n"
+            "description: \n"
+                "Docker is a containerization platform that packages software and its dependencies into portable containers. "
+                "On Ubuntu, Docker helps ensure consistency across development, testing, and production environments by isolating applications. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Deploying microservices\n"
+                "- Simplifying application distribution\n"
+                "- Streamlining development environments\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `docker --version`\n"
+                "- Enable and start service: `sudo systemctl enable --now docker`\n"
+                "- Test run: `sudo docker run hello-world`",
+        "Python 3": 
+            "command: nix-env -iA nixpkgs.python3\n"
+            "description: \n"
+                "Python 3 is a high-level programming language renowned for its readability and versatility. "
+                "On Ubuntu, it is used for web development, automation, data analysis, and much more. "
+                "Its extensive library ecosystem makes Python ideal for both beginners and professionals. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Web development (using frameworks like Django or Flask)\n"
+                "- Data analysis and machine learning\n"
+                "- Scripting and automation tasks\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `python3 --version`\n"
+                "- Use pip for additional libraries: `sudo apt install python3-pip`",
+        "Vim": 
+            "command: nix-env -iA nixpkgs.vim\n"
+            "description:\n"
+                "Vim is a highly efficient text editor that operates within the terminal, offering powerful editing and customization features. "
+                "On Ubuntu, Vim is favored by programmers and system administrators for its speed and extensive plugin ecosystem. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Code editing and scripting\n"
+                "- Remote server administration\n"
+                "- Quick file edits\n"
+                "\n⚡ Extra Notes:\n"
+                "- Open Vim: `vim filename`\n"
+                "- Save and exit: press `Esc` then type `:wq`\n"
+                "- Learn the basics with `vimtutor`",
     },
     "openSUSE": {
-        "Git": "sudo zypper install git",
-        "Node.js": "sudo zypper install nodejs",
-        "Docker": "sudo zypper install docker",
-        "Python 3": "sudo zypper install python3",
-        "Vim": "sudo zypper install vim",
+        "Git": 
+            "command: sudo zypper install git\n"
+            "description:\n"
+                "Git is a distributed version control system that tracks changes in source code. "
+                "On Ubuntu, Git is widely used by developers to collaborate on projects, manage code revisions, and handle branching and merging. "
+                "After installation, remember to configure your user name and email with Git. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Collaborating on open-source projects\n"
+                "- Managing personal projects and code histories\n"
+                "- Integrating with CI/CD pipelines\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `git --version`\n"
+                "- Basic config: `git config --global user.name 'Your Name'` and `git config --global user.email 'you@example.com'`",
+        "Node.js": 
+            "command: sudo zypper install nodejs\n"
+            "description:\n"
+                "Node.js is a JavaScript runtime that allows developers to execute JavaScript outside of the browser. "
+                "On Ubuntu, it's used for backend development, building APIs, and creating real-time applications. "
+                "It comes with npm (Node Package Manager) to manage dependencies efficiently. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Server-side web application development\n"
+                "- Real-time data processing\n"
+                "- Building scalable network applications\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `node -v`\n"
+                "- Install npm if needed: `sudo apt install npm`",
+        "Docker":
+            "command: sudo zypper install docker.io\n"
+            "description: \n"
+                "Docker is a containerization platform that packages software and its dependencies into portable containers. "
+                "On Ubuntu, Docker helps ensure consistency across development, testing, and production environments by isolating applications. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Deploying microservices\n"
+                "- Simplifying application distribution\n"
+                "- Streamlining development environments\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `docker --version`\n"
+                "- Enable and start service: `sudo systemctl enable --now docker`\n"
+                "- Test run: `sudo docker run hello-world`",
+        "Python 3": 
+            "command: sudo zypper install python3\n"
+            "description: \n"
+                "Python 3 is a high-level programming language renowned for its readability and versatility. "
+                "On Ubuntu, it is used for web development, automation, data analysis, and much more. "
+                "Its extensive library ecosystem makes Python ideal for both beginners and professionals. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Web development (using frameworks like Django or Flask)\n"
+                "- Data analysis and machine learning\n"
+                "- Scripting and automation tasks\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `python3 --version`\n"
+                "- Use pip for additional libraries: `sudo apt install python3-pip`",
+        "Vim": 
+            "command: sudo zypper install vim\n"
+            "description:\n"
+                "Vim is a highly efficient text editor that operates within the terminal, offering powerful editing and customization features. "
+                "On Ubuntu, Vim is favored by programmers and system administrators for its speed and extensive plugin ecosystem. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Code editing and scripting\n"
+                "- Remote server administration\n"
+                "- Quick file edits\n"
+                "\n⚡ Extra Notes:\n"
+                "- Open Vim: `vim filename`\n"
+                "- Save and exit: press `Esc` then type `:wq`\n"
+                "- Learn the basics with `vimtutor`",
     },
     "Manjaro": {
-        "Git": "sudo pacman -S git",
-        "Node.js": "sudo pacman -S nodejs",
-        "Docker": "sudo pacman -S docker",
-        "Python 3": "sudo pacman -S python",
-        "Vim": "sudo pacman -S vim",
+        "Git": 
+            "command: sudo pacman -S git\n"
+            "description:\n"
+                "Git is a distributed version control system that tracks changes in source code. "
+                "On Ubuntu, Git is widely used by developers to collaborate on projects, manage code revisions, and handle branching and merging. "
+                "After installation, remember to configure your user name and email with Git. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Collaborating on open-source projects\n"
+                "- Managing personal projects and code histories\n"
+                "- Integrating with CI/CD pipelines\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `git --version`\n"
+                "- Basic config: `git config --global user.name 'Your Name'` and `git config --global user.email 'you@example.com'`",
+        "Node.js": 
+            "command: sudo pacman -S nodejs\n"
+            "description:\n"
+                "Node.js is a JavaScript runtime that allows developers to execute JavaScript outside of the browser. "
+                "On Ubuntu, it's used for backend development, building APIs, and creating real-time applications. "
+                "It comes with npm (Node Package Manager) to manage dependencies efficiently. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Server-side web application development\n"
+                "- Real-time data processing\n"
+                "- Building scalable network applications\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `node -v`\n"
+                "- Install npm if needed: `sudo apt install npm`",
+        "Docker":
+            "command: sudo pacman -S docker\n"
+            "description: \n"
+                "Docker is a containerization platform that packages software and its dependencies into portable containers. "
+                "On Ubuntu, Docker helps ensure consistency across development, testing, and production environments by isolating applications. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Deploying microservices\n"
+                "- Simplifying application distribution\n"
+                "- Streamlining development environments\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `docker --version`\n"
+                "- Enable and start service: `sudo systemctl enable --now docker`\n"
+                "- Test run: `sudo docker run hello-world`",
+        "Python 3": 
+            "command: sudo pacman -S python3\n"
+            "description: \n"
+                "Python 3 is a high-level programming language renowned for its readability and versatility. "
+                "On Ubuntu, it is used for web development, automation, data analysis, and much more. "
+                "Its extensive library ecosystem makes Python ideal for both beginners and professionals. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Web development (using frameworks like Django or Flask)\n"
+                "- Data analysis and machine learning\n"
+                "- Scripting and automation tasks\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `python3 --version`\n"
+                "- Use pip for additional libraries: `sudo apt install python3-pip`",
+        "Vim": 
+            "command: sudo pacman -S vim\n"
+            "description:\n"
+                "Vim is a highly efficient text editor that operates within the terminal, offering powerful editing and customization features. "
+                "On Ubuntu, Vim is favored by programmers and system administrators for its speed and extensive plugin ecosystem. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Code editing and scripting\n"
+                "- Remote server administration\n"
+                "- Quick file edits\n"
+                "\n⚡ Extra Notes:\n"
+                "- Open Vim: `vim filename`\n"
+                "- Save and exit: press `Esc` then type `:wq`\n"
+                "- Learn the basics with `vimtutor`",
     },
     "EndeavourOS": {
-        "Git": "sudo pacman -S git",
-        "Node.js": "sudo pacman -S nodejs",
-        "Docker": "sudo pacman -S docker",
-        "Python 3": "sudo pacman -S python",
-        "Vim": "sudo pacman -S vim",
+        "Git": 
+            "command: sudo pacman -S git\n"
+            "description:\n"
+                "Git is a distributed version control system that tracks changes in source code. "
+                "On Ubuntu, Git is widely used by developers to collaborate on projects, manage code revisions, and handle branching and merging. "
+                "After installation, remember to configure your user name and email with Git. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Collaborating on open-source projects\n"
+                "- Managing personal projects and code histories\n"
+                "- Integrating with CI/CD pipelines\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `git --version`\n"
+                "- Basic config: `git config --global user.name 'Your Name'` and `git config --global user.email 'you@example.com'`",
+        "Node.js": 
+            "command: sudo pacman -S nodejs\n"
+            "description:\n"
+                "Node.js is a JavaScript runtime that allows developers to execute JavaScript outside of the browser. "
+                "On Ubuntu, it's used for backend development, building APIs, and creating real-time applications. "
+                "It comes with npm (Node Package Manager) to manage dependencies efficiently. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Server-side web application development\n"
+                "- Real-time data processing\n"
+                "- Building scalable network applications\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `node -v`\n"
+                "- Install npm if needed: `sudo apt install npm`",
+        "Docker":
+            "command: sudo pacman -S docker\n"
+            "description: \n"
+                "Docker is a containerization platform that packages software and its dependencies into portable containers. "
+                "On Ubuntu, Docker helps ensure consistency across development, testing, and production environments by isolating applications. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Deploying microservices\n"
+                "- Simplifying application distribution\n"
+                "- Streamlining development environments\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `docker --version`\n"
+                "- Enable and start service: `sudo systemctl enable --now docker`\n"
+                "- Test run: `sudo docker run hello-world`",
+        "Python 3": 
+            "command: sudo pacman -S python3\n"
+            "description: \n"
+                "Python 3 is a high-level programming language renowned for its readability and versatility. "
+                "On Ubuntu, it is used for web development, automation, data analysis, and much more. "
+                "Its extensive library ecosystem makes Python ideal for both beginners and professionals. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Web development (using frameworks like Django or Flask)\n"
+                "- Data analysis and machine learning\n"
+                "- Scripting and automation tasks\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `python3 --version`\n"
+                "- Use pip for additional libraries: `sudo apt install python3-pip`",
+        "Vim": 
+            "command: sudo pacman -S vim\n"
+            "description:\n"
+                "Vim is a highly efficient text editor that operates within the terminal, offering powerful editing and customization features. "
+                "On Ubuntu, Vim is favored by programmers and system administrators for its speed and extensive plugin ecosystem. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Code editing and scripting\n"
+                "- Remote server administration\n"
+                "- Quick file edits\n"
+                "\n⚡ Extra Notes:\n"
+                "- Open Vim: `vim filename`\n"
+                "- Save and exit: press `Esc` then type `:wq`\n"
+                "- Learn the basics with `vimtutor`",
     },
     "Arch Linux": {
-        "Git": "sudo pacman -S git",
-        "Node.js": "sudo pacman -S nodejs",
-        "Docker": "sudo pacman -S docker",
-        "Python 3": "sudo pacman -S python",
-        "Vim": "sudo pacman -S vim",
+        "Git": 
+            "command: sudo pacman -S git\n"
+            "description:\n"
+                "Git is a distributed version control system that tracks changes in source code. "
+                "On Ubuntu, Git is widely used by developers to collaborate on projects, manage code revisions, and handle branching and merging. "
+                "After installation, remember to configure your user name and email with Git. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Collaborating on open-source projects\n"
+                "- Managing personal projects and code histories\n"
+                "- Integrating with CI/CD pipelines\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `git --version`\n"
+                "- Basic config: `git config --global user.name 'Your Name'` and `git config --global user.email 'you@example.com'`",
+        "Node.js": 
+            "command: sudo pacman -S nodejs\n"
+            "description:\n"
+                "Node.js is a JavaScript runtime that allows developers to execute JavaScript outside of the browser. "
+                "On Ubuntu, it's used for backend development, building APIs, and creating real-time applications. "
+                "It comes with npm (Node Package Manager) to manage dependencies efficiently. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Server-side web application development\n"
+                "- Real-time data processing\n"
+                "- Building scalable network applications\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `node -v`\n"
+                "- Install npm if needed: `sudo apt install npm`",
+        "Docker":
+            "command: sudo pacman -S docker\n"
+            "description: \n"
+                "Docker is a containerization platform that packages software and its dependencies into portable containers. "
+                "On Ubuntu, Docker helps ensure consistency across development, testing, and production environments by isolating applications. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Deploying microservices\n"
+                "- Simplifying application distribution\n"
+                "- Streamlining development environments\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `docker --version`\n"
+                "- Enable and start service: `sudo systemctl enable --now docker`\n"
+                "- Test run: `sudo docker run hello-world`",
+        "Python 3": 
+            "command: sudo pacman -S python3\n"
+            "description: \n"
+                "Python 3 is a high-level programming language renowned for its readability and versatility. "
+                "On Ubuntu, it is used for web development, automation, data analysis, and much more. "
+                "Its extensive library ecosystem makes Python ideal for both beginners and professionals. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Web development (using frameworks like Django or Flask)\n"
+                "- Data analysis and machine learning\n"
+                "- Scripting and automation tasks\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check version: `python3 --version`\n"
+                "- Use pip for additional libraries: `sudo apt install python3-pip`",
+        "Vim": 
+            "command: sudo pacman -S vim\n"
+            "description:\n"
+                "Vim is a highly efficient text editor that operates within the terminal, offering powerful editing and customization features. "
+                "On Ubuntu, Vim is favored by programmers and system administrators for its speed and extensive plugin ecosystem. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Code editing and scripting\n"
+                "- Remote server administration\n"
+                "- Quick file edits\n"
+                "\n⚡ Extra Notes:\n"
+                "- Open Vim: `vim filename`\n"
+                "- Save and exit: press `Esc` then type `:wq`\n"
+                "- Learn the basics with `vimtutor`",
     },
 }
