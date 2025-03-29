@@ -36,6 +36,7 @@ class DistroSelectScreen(Screen):
     }
 
     #left-pane {
+        align: center middle;
         width: 100%;
         height: 100%;
         border: dodgerblue;
