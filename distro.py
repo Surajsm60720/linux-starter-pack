@@ -4,8 +4,7 @@ from textual.containers import Container, Horizontal, VerticalScroll
 from textual.screen import Screen
 from textual.reactive import reactive
 from info import DISTRO_FACTS
-from package_select import PackageSelectorScreen
-
+from categories_select import CategorySelectScreen
 
 class DistroOption(Markdown):
     def __init__(self, name: str) -> None:
@@ -98,15 +97,20 @@ class DistroSelectScreen(Screen):
             self.selected_index += 1
             self.update_selection()
 
+    # def action_select_distro(self) -> None:
+    #     selected_distro = list(DISTRO_FACTS.keys())[self.selected_index]
+    #     package_screen = CategorySelectScreen()
+    #     package_screen.selected_distro = selected_distro
+    #     self.app.push_screen(package_screen)
+
     def action_select_distro(self) -> None:
         selected_distro = list(DISTRO_FACTS.keys())[self.selected_index]
-        package_screen = PackageSelectorScreen()
-        package_screen.selected_distro = selected_distro
-        self.app.push_screen(package_screen)
+        category_screen = CategorySelectScreen()
+        category_screen.selected_distro = selected_distro  # Pass selected distro
+        self.app.push_screen(category_screen)
 
     def action_quit(self) -> None:
         self.app.exit()
 
     def action_go_back(self) -> None:
         self.app.pop_screen()
-
