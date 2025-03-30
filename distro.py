@@ -97,16 +97,10 @@ class DistroSelectScreen(Screen):
             self.selected_index += 1
             self.update_selection()
 
-    # def action_select_distro(self) -> None:
-    #     selected_distro = list(DISTRO_FACTS.keys())[self.selected_index]
-    #     package_screen = CategorySelectScreen()
-    #     package_screen.selected_distro = selected_distro
-    #     self.app.push_screen(package_screen)
-
     def action_select_distro(self) -> None:
         selected_distro = list(DISTRO_FACTS.keys())[self.selected_index]
         category_screen = CategorySelectScreen()
-        category_screen.selected_distro = selected_distro  # Pass selected distro
+        category_screen.selected_distro = selected_distro
         self.app.push_screen(category_screen)
 
     def action_quit(self) -> None:
