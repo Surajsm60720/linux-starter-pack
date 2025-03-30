@@ -1,0 +1,56 @@
+CATEGORIES_LIST = {
+    "Web Browsers": [
+        "Chromium",
+        "Google Chrome",
+        "Vivaldi",
+        "Opera",
+        "Brave",
+    ],
+    "Development": [
+        "git",
+        "vim",
+        "emacs",
+        "make",
+        "cmake",
+        "python3-pip",
+    ],
+    "Networking": [
+        "curl",
+        "wget",
+        "net-tools",
+        "traceroute",
+        "ping",
+    ],
+    "IDEs": [
+        "Visual Studio Code",
+        "PyCharm",
+        "IntelliJ IDEA",
+        "Eclipse",
+        "Android Studio",
+        "WebStorm",
+    ],
+    "Multimedia": [
+        "VLC",
+        "mpv",
+        "Audacity",
+        "ffmpeg",
+    ],
+    "Terminals": [
+        "Kitty",
+        "Alacritty",
+        "Wezterm",
+    ],
+    "Graphics": [
+        "Okular",
+        "Scribus",
+        "Gimp",
+        "Inkscape",
+        "Blender",
+        "ImageMagick",
+    ],    
+    "System Tools": [
+        "Gparted",
+        "Disks",
+        "Bleachbit",
+    ],
+}
