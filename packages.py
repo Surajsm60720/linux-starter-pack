@@ -979,6 +979,58 @@ PACKAGE_DETAILS = {
                 "\n⚡ Extra Notes:\n"
                 "- Fetch URL: `curl https://example.com`\n"
                 "- Save output: `curl -o file.html https://example.com`",
+        "wget": 
+            "command: sudo apt install wget\n"
+            "description:\n"
+                "wget is a command-line utility for downloading files from the internet using HTTP, HTTPS, and FTP protocols. "
+                "It supports recursive downloads, resuming interrupted downloads, and downloading entire websites. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Downloading files directly from the command line\n"
+                "- Automating downloads in scripts\n"
+                "- Mirroring websites for offline access\n"
+                "\n⚡ Extra Notes:\n"
+                "- Download a file: `wget <URL>`\n"
+                "- Resume a broken download: `wget -c <URL>`\n"
+                "- Download multiple files: `wget -i filelist.txt`",
+        "net-tools": 
+            "command: sudo apt install net-tools\n"
+            "description:\n"
+                "net-tools is a package that provides essential networking utilities, including `ifconfig`, `netstat`, and `route`. "
+                "It helps diagnose network issues, monitor network traffic, and configure network interfaces. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Checking network configurations and active connections\n"
+                "- Monitoring network traffic using `netstat`\n"
+                "- Troubleshooting IP routing with `route`\n"
+                "\n⚡ Extra Notes:\n"
+                "- Check IP and interfaces: `ifconfig`\n"
+                "- View open ports: `netstat -tulnp`\n"
+                "- Display routing table: `route -n`",
+        "traceroute": 
+            "command: sudo apt install traceroute\n"
+            "description:\n"
+                "traceroute is a diagnostic tool that maps the path packets take from a local system to a remote host. "
+                "It identifies network latency and routing issues by displaying each hop along the route. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Diagnosing network slowdowns and packet loss\n"
+                "- Identifying routing paths to remote servers\n"
+                "- Detecting firewall or ISP-imposed restrictions\n"
+                "\n⚡ Extra Notes:\n"
+                "- Basic usage: `traceroute example.com`\n"
+                "- Use TCP instead of UDP: `traceroute -T example.com`\n"
+                "- Increase the number of probes: `traceroute -q 5 example.com`",
+        "ping": 
+            "command: sudo apt install iputils-ping\n"
+            "description:\n"
+                "ping is a network utility that tests connectivity between two devices using ICMP echo requests. "
+                "It measures response time and helps troubleshoot network reachability issues. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Checking if a website or server is reachable\n"
+                "- Measuring network latency and packet loss\n"
+                "- Diagnosing local and remote connectivity issues\n"
+                "\n⚡ Extra Notes:\n"
+                "- Basic test: `ping example.com`\n"
+                "- Limit number of pings: `ping -c 5 example.com`\n"
+                "- Adjust packet size: `ping -s 1000 example.com`",
     },
 
     "IDEs": {
@@ -994,9 +1046,113 @@ PACKAGE_DETAILS = {
                 "\n⚡ Extra Notes:\n"
                 "- Launch: `code`\n"
                 "- Install extensions from the marketplace.",
+        "PyCharm": 
+            "command: sudo snap install pycharm-community --classic\n"
+            "description:\n"
+                "PyCharm is a powerful Python IDE developed by JetBrains, featuring intelligent code assistance, debugging, and integration with frameworks like Django and Flask. "
+                "It enhances productivity with code completion, error highlighting, and built-in tools for testing. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Developing Python applications efficiently\n"
+                "- Debugging and profiling Python scripts\n"
+                "- Managing virtual environments seamlessly\n"
+                "\n⚡ Extra Notes:\n"
+                "- Launch PyCharm: `pycharm`\n"
+                "- Install plugins: Navigate to `Settings > Plugins`\n"
+                "- Enable virtualenv: `Settings > Project > Python Interpreter`",
+        "IntelliJ IDEA": 
+            "command: sudo snap install intellij-idea-community --classic\n"
+            "description:\n"
+                "IntelliJ IDEA is a Java-centric IDE by JetBrains, offering advanced code completion, debugging, and refactoring tools. "
+                "It supports multiple languages, integrates with build tools like Maven and Gradle, and provides a smooth development experience. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Java development with smart code assistance\n"
+                "- Working with frameworks like Spring and Hibernate\n"
+                "- Managing complex projects with Git integration\n"
+                "\n⚡ Extra Notes:\n"
+                "- Launch: `intellij-idea-community`\n"
+                "- Open an existing project: `File > Open`\n"
+                "- Debug a Java application: `Run > Debug`",
+        "Eclipse": 
+            "command: sudo snap install eclipse --classic\n"
+            "description:\n"
+                "Eclipse is an open-source IDE primarily used for Java development, but it also supports Python, C++, and web technologies through plugins. "
+                "It includes powerful refactoring tools, a built-in debugger, and extensive customization options. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Java and Android development\n"
+                "- Extending features with Eclipse Marketplace plugins\n"
+                "- Managing large enterprise applications\n"
+                "\n⚡ Extra Notes:\n"
+                "- Launch: `eclipse`\n"
+                "- Install new plugins: `Help > Eclipse Marketplace`\n"
+                "- Configure workspaces: `File > Switch Workspace`",
+        "Android Studio": 
+            "command: sudo snap install android-studio --classic\n"
+            "description:\n"
+                "Android Studio is the official IDE for Android development, providing a rich UI editor, code completion, and emulator support. "
+                "It integrates with Gradle for project builds and supports Kotlin, Java, and Flutter development. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Building Android applications efficiently\n"
+                "- Debugging mobile apps with built-in tools\n"
+                "- Designing responsive UIs with Layout Editor\n"
+                "\n⚡ Extra Notes:\n"
+                "- Launch: `android-studio`\n"
+                "- Create a new project: `File > New Project`\n"
+                "- Run app on emulator: `Tools > AVD Manager`",
+        "WebStorm": 
+            "command: sudo snap install webstorm --classic\n"
+            "description:\n"
+                "WebStorm is a JetBrains IDE for web development, offering intelligent code completion, debugging, and Git integration. "
+                "It supports JavaScript, TypeScript, React, Angular, and Vue.js. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Frontend and backend JavaScript development\n"
+                "- Debugging Node.js applications\n"
+                "- Managing web frameworks efficiently\n"
+                "\n⚡ Extra Notes:\n"
+                "- Launch: `webstorm`\n"
+                "- Install extensions: `Settings > Plugins`\n"
+                "- Use live templates for faster coding",
+        "Cursor": 
+            "command: Not available in official repositories, download from official website\n"
+            "description:\n"
+                "Cursor is an AI-powered code editor designed for efficient coding with real-time suggestions and AI-assisted debugging. "
+                "It integrates with popular version control systems and enhances productivity for modern developers. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- AI-powered code assistance for programming\n"
+                "- Writing and refactoring large codebases quickly\n"
+                "- Seamless integration with Git and cloud services\n"
+                "\n⚡ Extra Notes:\n"
+                "- Download from official site: `https://cursor.sh/`\n"
+                "- Set up API keys for AI features\n"
+                "- Customize themes and keybindings in settings",
     },
 
     "Multimedia": {
+        "Spotify": 
+            "command: sudo snap install spotify\n"
+            "description:\n"
+                "Spotify is a digital music streaming service that provides access to millions of songs, podcasts, and playlists. "
+                "It offers both free and premium subscriptions with offline listening and ad-free experiences. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Streaming music and podcasts\n"
+                "- Creating and sharing playlists\n"
+                "- Downloading songs for offline listening (Premium)\n"
+                "\n⚡ Extra Notes:\n"
+                "- Launch: `spotify`\n"
+                "- Sign in with your Spotify account to sync playlists\n"
+                "- Adjust audio quality in `Settings > Music Quality`",
+        "Discord": 
+            "command: sudo snap install discord\n"
+            "description:\n"
+                "Discord is a popular VoIP, instant messaging, and digital distribution platform for communities and gamers. "
+                "It supports voice channels, text chats, and screen sharing. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Gaming communication with friends and communities\n"
+                "- Voice and video calls with screen sharing\n"
+                "- Organizing communities via Discord servers\n"
+                "\n⚡ Extra Notes:\n"
+                "- Launch: `discord`\n"
+                "- Use `/` commands for quick actions\n"
+                "- Customize notifications in `User Settings > Notifications`",
         "VLC":
             "command: sudo apt install vlc\n"
             "description:\n"
@@ -1009,6 +1165,45 @@ PACKAGE_DETAILS = {
                 "\n⚡ Extra Notes:\n"
                 "- Launch: `vlc`\n"
                 "- Convert files: `vlc -I dummy input.mp4 --sout='#transcode{vcodec=h264}:std{access=file,dst=output.mp4}' vlc://quit`",
+        "mpv": 
+            "command: sudo apt install mpv\n"
+            "description:\n"
+                "mpv is a lightweight, open-source media player based on MPlayer and mplayer2. "
+                "It supports a wide range of video and audio formats with GPU acceleration. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Playing high-quality video files with minimal CPU usage\n"
+                "- Watching YouTube videos directly from the terminal\n"
+                "- Using scripts and keybindings for advanced playback controls\n"
+                "\n⚡ Extra Notes:\n"
+                "- Basic usage: `mpv video.mp4`\n"
+                "- Stream online videos: `mpv <URL>`\n"
+                "- Enable subtitles automatically: `mpv --sub-auto=fuzzy video.mp4`",
+        "Audacity": 
+            "command: sudo apt install audacity\n"
+            "description:\n"
+                "Audacity is a free, open-source audio editing software used for recording, editing, and processing audio. "
+                "It supports multi-track editing, effects, and plugins. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Recording and editing podcasts or voiceovers\n"
+                "- Enhancing audio quality with noise reduction and equalization\n"
+                "- Exporting audio in multiple formats (MP3, WAV, FLAC)\n"
+                "\n⚡ Extra Notes:\n"
+                "- Launch: `audacity`\n"
+                "- Import audio: `File > Import`\n"
+                "- Apply effects: `Effects > Equalization, Noise Reduction`",
+        "ffmpeg": 
+            "command: sudo apt install ffmpeg\n"
+            "description:\n"
+                "ffmpeg is a powerful command-line tool for processing video and audio files. "
+                "It can convert, record, and stream multimedia files with support for multiple codecs. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Converting video formats (MP4, MKV, AVI, etc.)\n"
+                "- Extracting audio from videos\n"
+                "- Streaming and screen recording\n"
+                "\n⚡ Extra Notes:\n"
+                "- Convert a video: `ffmpeg -i input.mp4 output.avi`\n"
+                "- Extract audio: `ffmpeg -i video.mp4 -vn -acodec copy audio.mp3`\n"
+                "- Resize video: `ffmpeg -i input.mp4 -vf scale=1280:720 output.mp4`",
     },
 
     "Terminals": {
@@ -1024,9 +1219,62 @@ PACKAGE_DETAILS = {
                 "\n⚡ Extra Notes:\n"
                 "- Launch: `kitty`\n"
                 "- Customize config: `~/.config/kitty/kitty.conf`",
+       "Alacritty": 
+            "command: sudo apt install alacritty\n"
+            "description:\n"
+                "Alacritty is a GPU-accelerated terminal emulator known for its speed and simplicity. "
+                "It supports OpenGL rendering for fast performance. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Using a lightweight and fast terminal for development\n"
+                "- Customizing themes and keybindings via `alacritty.yml`\n"
+                "- Running multiple shell sessions efficiently\n"
+                "\n⚡ Extra Notes:\n"
+                "- Launch: `alacritty`\n"
+                "- Customize: Edit `~/.config/alacritty/alacritty.yml`\n"
+                "- Increase font size: `Ctrl + Shift + Plus`",
+        "Wezterm": 
+            "command: Download from https://wezfurlong.org/wezterm/\n"
+            "description:\n"
+                "WezTerm is a modern, GPU-accelerated terminal emulator with support for tabs, multiplexing, and SSH integration. "
+                "It is highly configurable and supports features like ligatures and remote connections. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Running a powerful and customizable terminal\n"
+                "- Using SSH and remote server management\n"
+                "- Creating workspaces with multiple terminal panes\n"
+                "\n⚡ Extra Notes:\n"
+                "- Launch: `wezterm`\n"
+                "- Configure settings in `~/.wezterm.lua`\n"
+                "- Split terminal: `Ctrl + Shift + D`",
     },
 
     "Graphics": {
+        "Okular": 
+            "command: sudo apt install okular\n"
+            "description:\n"
+                "Okular is a versatile document viewer developed by KDE. "
+                "It supports multiple file formats, including PDF, EPUB, DjVu, and more. "
+                "With its annotation and text extraction features, Okular is ideal for both casual reading and professional document management. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Reading PDFs and EPUB books\n"
+                "- Annotating documents with highlights and notes\n"
+                "- Extracting text from PDFs and scanned documents\n"
+                "\n⚡ Extra Notes:\n"
+                "- Launch: `okular`\n"
+                "- Use `F6` to activate annotation tools\n"
+                "- Search within documents using `Ctrl + F`",
+        "Scribus": 
+            "command: sudo apt install scribus\n"
+            "description:\n"
+                "Scribus is an open-source desktop publishing (DTP) application used for creating professional-quality layouts. "
+                "It is ideal for designing magazines, brochures, flyers, and books, offering advanced typography and PDF export features. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Designing print-ready publications and layouts\n"
+                "- Creating professional PDF documents with high-quality typography\n"
+                "- Producing newsletters, posters, and business cards\n"
+                "\n⚡ Extra Notes:\n"
+                "- Launch: `scribus`\n"
+                "- Use `File > Export` to generate high-resolution PDFs\n"
+                "- Enable color management for print design under `Preferences > Color Management`",
         "Gimp":
             "command: sudo apt install gimp\n"
             "description:\n"
@@ -1039,6 +1287,45 @@ PACKAGE_DETAILS = {
                 "\n⚡ Extra Notes:\n"
                 "- Launch: `gimp`\n"
                 "- Supports plugins and scripting with Python.",
+        "Inkscape": 
+            "command: sudo apt install inkscape\n"
+            "description:\n"
+                "Inkscape is a professional vector graphics editor for creating illustrations, icons, logos, and more. "
+                "It supports SVG and various export formats. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Designing vector illustrations and UI elements\n"
+                "- Editing and converting SVG files\n"
+                "- Creating logos and digital art\n"
+                "\n⚡ Extra Notes:\n"
+                "- Launch: `inkscape`\n"
+                "- Save projects in `.svg` format for scalability\n"
+                "- Use `Extensions > Color > Remove Background` to edit images",
+        "Blender": 
+            "command: sudo apt install blender\n"
+            "description:\n"
+                "Blender is an open-source 3D modeling and animation software. "
+                "It supports rendering, sculpting, simulation, and video editing. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Creating 3D models and animations\n"
+                "- Simulating physics-based effects\n"
+                "- Rendering high-quality graphics\n"
+                "\n⚡ Extra Notes:\n"
+                "- Launch: `blender`\n"
+                "- Use `E` for extrude and `Ctrl + R` for edge loops\n"
+                "- Enable GPU rendering for faster processing",
+        "ImageMagick": 
+            "command: sudo apt install imagemagick\n"
+            "description:\n"
+                "ImageMagick is a powerful command-line tool for editing, converting, and processing images. "
+                "It supports a wide range of image formats and can perform batch operations efficiently. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Converting images between different formats (PNG, JPEG, TIFF, etc.)\n"
+                "- Resizing and compressing images for web optimization\n"
+                "- Applying filters and effects via command-line scripts\n"
+                "\n⚡ Extra Notes:\n"
+                "- Convert images: `convert input.png output.jpg`\n"
+                "- Resize images: `convert input.jpg -resize 800x600 output.jpg`\n"
+                "- Batch convert PNG to JPG: `mogrify -format jpg *.png`",
     },
 
     "System Tools": {
@@ -1054,5 +1341,32 @@ PACKAGE_DETAILS = {
                 "\n⚡ Extra Notes:\n"
                 "- Launch: `gparted`\n"
                 "- Requires root privileges to modify partitions.",
+        "Disks": 
+            "command: sudo apt install gnome-disk-utility\n"
+            "description:\n"
+                "GNOME Disks is a graphical tool for managing hard drives and partitions. "
+                "It allows users to format, mount, and benchmark disks easily. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Checking disk health and SMART status\n"
+                "- Formatting and partitioning drives\n"
+                "- Creating and restoring disk images\n"
+                "\n⚡ Extra Notes:\n"
+                "- Launch: `gnome-disks`\n"
+                "- Create a bootable USB: `Restore Disk Image > Select ISO`\n"
+                "- Run performance benchmark: `Disks > Benchmark`",
+
+        "BleachBit": 
+            "command: sudo apt install bleachbit\n"
+            "description:\n"
+                "BleachBit is a disk cleaning utility that frees up space and protects privacy by removing unnecessary files. "
+                "It cleans system caches, logs, and temporary files. "
+                "\n\n🔹 Common Use Cases:\n"
+                "- Deleting junk files to free up space\n"
+                "- Securely wiping sensitive data\n"
+                "- Cleaning browser history and cookies\n"
+                "\n⚡ Extra Notes:\n"
+                "- Launch: `bleachbit`\n"
+                "- Clean system files: `sudo bleachbit --clean system.*`\n"
+                "- Shred files securely: `bleachbit --shred <file>`",
     },
 }
