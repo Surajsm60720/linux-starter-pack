@@ -40,6 +40,7 @@ class CategorySelectScreen(Screen):
         width: 100%;
         height: 100%;
         border: dodgerblue;
+        row-span: 2;
     }
 
     #right-pane {       
@@ -47,6 +48,17 @@ class CategorySelectScreen(Screen):
         height: 100%;
         border: mediumvioletred;
         padding: 1;
+    }
+
+    #bottom-right {
+        height: 100%;
+        layout: grid;
+        grid-size: 3;
+        grid-columns: 2fr;
+        grid-rows: 1fr;
+        grid-gutter: 1;
+        background: $panel;
+        border: greenyellow;
     }
 
     .selected {
@@ -68,6 +80,8 @@ class CategorySelectScreen(Screen):
             with Container(id="right-pane"):
                 self.details_panel = Static(self.get_selected_category_info(), id="details")
                 yield self.details_panel
+            with Container(id="bottom-right"):
+                yield Static("Here comes the cart items")
 
         yield Footer()
 
