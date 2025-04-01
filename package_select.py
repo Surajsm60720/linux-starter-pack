@@ -3,10 +3,13 @@ from textual.widgets import Footer, Markdown, Static
 from textual.containers import Container, Horizontal, VerticalScroll
 from textual.screen import Screen
 from textual.reactive import reactive
-from packages import PACKAGE_LIST
-
+from packages import PACKAGE_DETAILS
 
 class PackageSelectorScreen(Screen):
+
+    def __init__(self, selected_category: str) -> None:
+        self.selected_category = selected_category
+        super().__init__()
 
     selected_distro = ""
 
@@ -65,7 +68,7 @@ class PackageSelectorScreen(Screen):
             with VerticalScroll(id="left-pane"):
                 self.package_options = [
                     Markdown(f"**{pkg}**")
-                    for pkg, cmd in PACKAGE_LIST[self.selected_distro].items()
+                    for pkg, cmd in PACKAGE_DETAILS[self.selected_category].items()
                 ]
                 for option in self.package_options:
                     yield option
@@ -78,15 +81,15 @@ class PackageSelectorScreen(Screen):
         yield Footer()
     
     BINDINGS=[
-        ("escape", "go_back", "Back to Distro selection"),
+        ("escape", "go_back", "Back to Category Selection"),
         ("q", "quit", "Quit"),
         ("up", "select_previous", "Select Previous Package"),
         ("down", "select_next", "Select Next Package"),
     ]
 
     def get_selected_command(self) -> str:
-        package_name = list(PACKAGE_LIST[self.selected_distro].keys())[self.selected_index]
-        return PACKAGE_LIST[self.selected_distro][package_name]
+        package_name = list(PACKAGE_DETAILS[self.selected_category].keys())[self.selected_index]
+        return PACKAGE_DETAILS[self.selected_category][package_name]
 
     def update_selection(self) -> None:
         for i, option in enumerate(self.package_options):
@@ -101,6 +104,7 @@ class PackageSelectorScreen(Screen):
             self.update_selection()
 
     def action_select_next(self) -> None:
+        
         if self.selected_index < len(self.package_options) - 1:
             self.selected_index += 1
             self.update_selection()

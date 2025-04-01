@@ -1,8 +1,8 @@
 # PACKAGE_LIST = {
 #     "Ubuntu": {
 #         "Git": 
-#             "command: sudo apt install git\n"
-#             "description:\n"
+#             "Command: sudo apt install git\n"
+#             "Description:\n"
 #                 "Git is a distributed version control system that tracks changes in source code. "
 #                 "On Ubuntu, Git is widely used by developers to collaborate on projects, manage code revisions, and handle branching and merging. "
 #                 "After installation, remember to configure your user name and email with Git. "
@@ -14,8 +14,8 @@
 #                 "- Check version: `git --version`\n"
 #                 "- Basic config: `git config --global user.name 'Your Name'` and `git config --global user.email 'you@example.com'`",
 #         "Node.js": 
-#             "command: sudo apt install nodejs\n"
-#             "description:\n"
+#             "Command: sudo apt install nodejs\n"
+#             "Description:\n"
 #                 "Node.js is a JavaScript runtime that allows developers to execute JavaScript outside of the browser. "
 #                 "On Ubuntu, it's used for backend development, building APIs, and creating real-time applications. "
 #                 "It comes with npm (Node Package Manager) to manage dependencies efficiently. "
@@ -27,8 +27,8 @@
 #                 "- Check version: `node -v`\n"
 #                 "- Install npm if needed: `sudo apt install npm`",
 #         "Docker":
-#             "command: sudo apt install docker.io\n"
-#             "description: \n"
+#             "Command: sudo apt install docker.io\n"
+#             "Description: \n"
 #                 "Docker is a containerization platform that packages software and its dependencies into portable containers. "
 #                 "On Ubuntu, Docker helps ensure consistency across development, testing, and production environments by isolating applications. "
 #                 "\n\n🔹 Common Use Cases:\n"
@@ -40,8 +40,8 @@
 #                 "- Enable and start service: `sudo systemctl enable --now docker`\n"
 #                 "- Test run: `sudo docker run hello-world`",
 #         "Python 3": 
-#             "command: sudo apt install python3\n"
-#             "description: \n"
+#             "Command: sudo apt install python3\n"
+#             "Description: \n"
 #                 "Python 3 is a high-level programming language renowned for its readability and versatility. "
 #                 "On Ubuntu, it is used for web development, automation, data analysis, and much more. "
 #                 "Its extensive library ecosystem makes Python ideal for both beginners and professionals. "
@@ -53,8 +53,8 @@
 #                 "- Check version: `python3 --version`\n"
 #                 "- Use pip for additional libraries: `sudo apt install python3-pip`",
 #         "Vim": 
-#             "command: sudo apt install vim\n"
-#             "description:\n"
+#             "Command: sudo apt install vim\n"
+#             "Description:\n"
 #                 "Vim is a highly efficient text editor that operates within the terminal, offering powerful editing and customization features. "
 #                 "On Ubuntu, Vim is favored by programmers and system administrators for its speed and extensive plugin ecosystem. "
 #                 "\n\n🔹 Common Use Cases:\n"
@@ -68,8 +68,8 @@
 #     },
 #     "Debian": {
 #         "Git": 
-#             "command: sudo apt install git\n"
-#             "description:\n"
+#             "Command: sudo apt install git\n"
+#             "Description:\n"
 #                 "Git is a distributed version control system that tracks changes in source code. "
 #                 "On Ubuntu, Git is widely used by developers to collaborate on projects, manage code revisions, and handle branching and merging. "
 #                 "After installation, remember to configure your user name and email with Git. "
@@ -81,8 +81,8 @@
 #                 "- Check version: `git --version`\n"
 #                 "- Basic config: `git config --global user.name 'Your Name'` and `git config --global user.email 'you@example.com'`",
 #         "Node.js": 
-#             "command: sudo apt install nodejs\n"
-#             "description:\n"
+#             "Command: sudo apt install nodejs\n"
+#             "Description:\n"
 #                 "Node.js is a JavaScript runtime that allows developers to execute JavaScript outside of the browser. "
 #                 "On Ubuntu, it's used for backend development, building APIs, and creating real-time applications. "
 #                 "It comes with npm (Node Package Manager) to manage dependencies efficiently. "
@@ -94,8 +94,8 @@
 #                 "- Check version: `node -v`\n"
 #                 "- Install npm if needed: `sudo apt install npm`",
 #         "Docker":
-#             "command: sudo apt install docker.io\n"
-#             "description: \n"
+#             "Command: sudo apt install docker.io\n"
+#             "Description: \n"
 #                 "Docker is a containerization platform that packages software and its dependencies into portable containers. "
 #                 "On Ubuntu, Docker helps ensure consistency across development, testing, and production environments by isolating applications. "
 #                 "\n\n🔹 Common Use Cases:\n"
@@ -107,8 +107,8 @@
 #                 "- Enable and start service: `sudo systemctl enable --now docker`\n"
 #                 "- Test run: `sudo docker run hello-world`",
 #         "Python 3": 
-#             "command: sudo apt install python3\n"
-#             "description: \n"
+#             "Command: sudo apt install python3\n"
+#             "Description: \n"
 #                 "Python 3 is a high-level programming language renowned for its readability and versatility. "
 #                 "On Ubuntu, it is used for web development, automation, data analysis, and much more. "
 #                 "Its extensive library ecosystem makes Python ideal for both beginners and professionals. "
@@ -120,8 +120,8 @@
 #                 "- Check version: `python3 --version`\n"
 #                 "- Use pip for additional libraries: `sudo apt install python3-pip`",
 #         "Vim": 
-#             "command: sudo apt install vim\n"
-#             "description:\n"
+#             "Command: sudo apt install vim\n"
+#             "Description:\n"
 #                 "Vim is a highly efficient text editor that operates within the terminal, offering powerful editing and customization features. "
 #                 "On Ubuntu, Vim is favored by programmers and system administrators for its speed and extensive plugin ecosystem. "
 #                 "\n\n🔹 Common Use Cases:\n"
@@ -135,8 +135,8 @@
 #     },
 #     "Linux Mint": {
 #         "Git": 
-#             "command: sudo apt install git\n"
-#             "description:\n"
+#             "Command: sudo apt install git\n"
+#             "Description:\n"
 #                 "Git is a distributed version control system that tracks changes in source code. "
 #                 "On Ubuntu, Git is widely used by developers to collaborate on projects, manage code revisions, and handle branching and merging. "
 #                 "After installation, remember to configure your user name and email with Git. "
@@ -148,8 +148,8 @@
 #                 "- Check version: `git --version`\n"
 #                 "- Basic config: `git config --global user.name 'Your Name'` and `git config --global user.email 'you@example.com'`",
 #         "Node.js": 
-#             "command: sudo apt install nodejs\n"
-#             "description:\n"
+#             "Command: sudo apt install nodejs\n"
+#             "Description:\n"
 #                 "Node.js is a JavaScript runtime that allows developers to execute JavaScript outside of the browser. "
 #                 "On Ubuntu, it's used for backend development, building APIs, and creating real-time applications. "
 #                 "It comes with npm (Node Package Manager) to manage dependencies efficiently. "
@@ -161,8 +161,8 @@
 #                 "- Check version: `node -v`\n"
 #                 "- Install npm if needed: `sudo apt install npm`",
 #         "Docker":
-#             "command: sudo apt install docker.io\n"
-#             "description: \n"
+#             "Command: sudo apt install docker.io\n"
+#             "Description: \n"
 #                 "Docker is a containerization platform that packages software and its dependencies into portable containers. "
 #                 "On Ubuntu, Docker helps ensure consistency across development, testing, and production environments by isolating applications. "
 #                 "\n\n🔹 Common Use Cases:\n"
@@ -174,8 +174,8 @@
 #                 "- Enable and start service: `sudo systemctl enable --now docker`\n"
 #                 "- Test run: `sudo docker run hello-world`",
 #         "Python 3": 
-#             "command: sudo apt install python3\n"
-#             "description: \n"
+#             "Command: sudo apt install python3\n"
+#             "Description: \n"
 #                 "Python 3 is a high-level programming language renowned for its readability and versatility. "
 #                 "On Ubuntu, it is used for web development, automation, data analysis, and much more. "
 #                 "Its extensive library ecosystem makes Python ideal for both beginners and professionals. "
@@ -187,8 +187,8 @@
 #                 "- Check version: `python3 --version`\n"
 #                 "- Use pip for additional libraries: `sudo apt install python3-pip`",
 #         "Vim": 
-#             "command: sudo apt install vim\n"
-#             "description:\n"
+#             "Command: sudo apt install vim\n"
+#             "Description:\n"
 #                 "Vim is a highly efficient text editor that operates within the terminal, offering powerful editing and customization features. "
 #                 "On Ubuntu, Vim is favored by programmers and system administrators for its speed and extensive plugin ecosystem. "
 #                 "\n\n🔹 Common Use Cases:\n"
@@ -202,8 +202,8 @@
 #     },
 #     "Pop!_OS": {
 #         "Git": 
-#             "command: sudo apt install git\n"
-#             "description:\n"
+#             "Command: sudo apt install git\n"
+#             "Description:\n"
 #                 "Git is a distributed version control system that tracks changes in source code. "
 #                 "On Ubuntu, Git is widely used by developers to collaborate on projects, manage code revisions, and handle branching and merging. "
 #                 "After installation, remember to configure your user name and email with Git. "
@@ -215,8 +215,8 @@
 #                 "- Check version: `git --version`\n"
 #                 "- Basic config: `git config --global user.name 'Your Name'` and `git config --global user.email 'you@example.com'`",
 #         "Node.js": 
-#             "command: sudo apt install nodejs\n"
-#             "description:\n"
+#             "Command: sudo apt install nodejs\n"
+#             "Description:\n"
 #                 "Node.js is a JavaScript runtime that allows developers to execute JavaScript outside of the browser. "
 #                 "On Ubuntu, it's used for backend development, building APIs, and creating real-time applications. "
 #                 "It comes with npm (Node Package Manager) to manage dependencies efficiently. "
@@ -228,8 +228,8 @@
 #                 "- Check version: `node -v`\n"
 #                 "- Install npm if needed: `sudo apt install npm`",
 #         "Docker":
-#             "command: sudo apt install docker.io\n"
-#             "description: \n"
+#             "Command: sudo apt install docker.io\n"
+#             "Description: \n"
 #                 "Docker is a containerization platform that packages software and its dependencies into portable containers. "
 #                 "On Ubuntu, Docker helps ensure consistency across development, testing, and production environments by isolating applications. "
 #                 "\n\n🔹 Common Use Cases:\n"
@@ -241,8 +241,8 @@
 #                 "- Enable and start service: `sudo systemctl enable --now docker`\n"
 #                 "- Test run: `sudo docker run hello-world`",
 #         "Python 3": 
-#             "command: sudo apt install python3\n"
-#             "description: \n"
+#             "Command: sudo apt install python3\n"
+#             "Description: \n"
 #                 "Python 3 is a high-level programming language renowned for its readability and versatility. "
 #                 "On Ubuntu, it is used for web development, automation, data analysis, and much more. "
 #                 "Its extensive library ecosystem makes Python ideal for both beginners and professionals. "
@@ -254,8 +254,8 @@
 #                 "- Check version: `python3 --version`\n"
 #                 "- Use pip for additional libraries: `sudo apt install python3-pip`",
 #         "Vim": 
-#             "command: sudo apt install vim\n"
-#             "description:\n"
+#             "Command: sudo apt install vim\n"
+#             "Description:\n"
 #                 "Vim is a highly efficient text editor that operates within the terminal, offering powerful editing and customization features. "
 #                 "On Ubuntu, Vim is favored by programmers and system administrators for its speed and extensive plugin ecosystem. "
 #                 "\n\n🔹 Common Use Cases:\n"
@@ -269,8 +269,8 @@
 #     },
 #     "Zorin OS": {
 #         "Git": 
-#             "command: sudo apt install git\n"
-#             "description:\n"
+#             "Command: sudo apt install git\n"
+#             "Description:\n"
 #                 "Git is a distributed version control system that tracks changes in source code. "
 #                 "On Ubuntu, Git is widely used by developers to collaborate on projects, manage code revisions, and handle branching and merging. "
 #                 "After installation, remember to configure your user name and email with Git. "
@@ -282,8 +282,8 @@
 #                 "- Check version: `git --version`\n"
 #                 "- Basic config: `git config --global user.name 'Your Name'` and `git config --global user.email 'you@example.com'`",
 #         "Node.js": 
-#             "command: sudo apt install nodejs\n"
-#             "description:\n"
+#             "Command: sudo apt install nodejs\n"
+#             "Description:\n"
 #                 "Node.js is a JavaScript runtime that allows developers to execute JavaScript outside of the browser. "
 #                 "On Ubuntu, it's used for backend development, building APIs, and creating real-time applications. "
 #                 "It comes with npm (Node Package Manager) to manage dependencies efficiently. "
@@ -295,8 +295,8 @@
 #                 "- Check version: `node -v`\n"
 #                 "- Install npm if needed: `sudo apt install npm`",
 #         "Docker":
-#             "command: sudo apt install docker.io\n"
-#             "description: \n"
+#             "Command: sudo apt install docker.io\n"
+#             "Description: \n"
 #                 "Docker is a containerization platform that packages software and its dependencies into portable containers. "
 #                 "On Ubuntu, Docker helps ensure consistency across development, testing, and production environments by isolating applications. "
 #                 "\n\n🔹 Common Use Cases:\n"
@@ -308,8 +308,8 @@
 #                 "- Enable and start service: `sudo systemctl enable --now docker`\n"
 #                 "- Test run: `sudo docker run hello-world`",
 #         "Python 3": 
-#             "command: sudo apt install python3\n"
-#             "description: \n"
+#             "Command: sudo apt install python3\n"
+#             "Description: \n"
 #                 "Python 3 is a high-level programming language renowned for its readability and versatility. "
 #                 "On Ubuntu, it is used for web development, automation, data analysis, and much more. "
 #                 "Its extensive library ecosystem makes Python ideal for both beginners and professionals. "
@@ -321,8 +321,8 @@
 #                 "- Check version: `python3 --version`\n"
 #                 "- Use pip for additional libraries: `sudo apt install python3-pip`",
 #         "Vim": 
-#             "command: sudo apt install vim\n"
-#             "description:\n"
+#             "Command: sudo apt install vim\n"
+#             "Description:\n"
 #                 "Vim is a highly efficient text editor that operates within the terminal, offering powerful editing and customization features. "
 #                 "On Ubuntu, Vim is favored by programmers and system administrators for its speed and extensive plugin ecosystem. "
 #                 "\n\n🔹 Common Use Cases:\n"
@@ -336,8 +336,8 @@
 #     },
 #     "Fedora Workstation": {
 #         "Git": 
-#             "command: sudo dnf install git\n"
-#             "description:\n"
+#             "Command: sudo dnf install git\n"
+#             "Description:\n"
 #                 "Git is a distributed version control system that tracks changes in source code. "
 #                 "On Ubuntu, Git is widely used by developers to collaborate on projects, manage code revisions, and handle branching and merging. "
 #                 "After installation, remember to configure your user name and email with Git. "
@@ -349,8 +349,8 @@
 #                 "- Check version: `git --version`\n"
 #                 "- Basic config: `git config --global user.name 'Your Name'` and `git config --global user.email 'you@example.com'`",
 #         "Node.js": 
-#             "command: sudo dnf install nodejs\n"
-#             "description:\n"
+#             "Command: sudo dnf install nodejs\n"
+#             "Description:\n"
 #                 "Node.js is a JavaScript runtime that allows developers to execute JavaScript outside of the browser. "
 #                 "On Ubuntu, it's used for backend development, building APIs, and creating real-time applications. "
 #                 "It comes with npm (Node Package Manager) to manage dependencies efficiently. "
@@ -362,8 +362,8 @@
 #                 "- Check version: `node -v`\n"
 #                 "- Install npm if needed: `sudo apt install npm`",
 #         "Docker":
-#             "command: sudo dnf install docker.io\n"
-#             "description: \n"
+#             "Command: sudo dnf install docker.io\n"
+#             "Description: \n"
 #                 "Docker is a containerization platform that packages software and its dependencies into portable containers. "
 #                 "On Ubuntu, Docker helps ensure consistency across development, testing, and production environments by isolating applications. "
 #                 "\n\n🔹 Common Use Cases:\n"
@@ -375,8 +375,8 @@
 #                 "- Enable and start service: `sudo systemctl enable --now docker`\n"
 #                 "- Test run: `sudo docker run hello-world`",
 #         "Python 3": 
-#             "command: sudo dnf install python3\n"
-#             "description: \n"
+#             "Command: sudo dnf install python3\n"
+#             "Description: \n"
 #                 "Python 3 is a high-level programming language renowned for its readability and versatility. "
 #                 "On Ubuntu, it is used for web development, automation, data analysis, and much more. "
 #                 "Its extensive library ecosystem makes Python ideal for both beginners and professionals. "
@@ -388,8 +388,8 @@
 #                 "- Check version: `python3 --version`\n"
 #                 "- Use pip for additional libraries: `sudo apt install python3-pip`",
 #         "Vim": 
-#             "command: sudo dnf install vim\n"
-#             "description:\n"
+#             "Command: sudo dnf install vim\n"
+#             "Description:\n"
 #                 "Vim is a highly efficient text editor that operates within the terminal, offering powerful editing and customization features. "
 #                 "On Ubuntu, Vim is favored by programmers and system administrators for its speed and extensive plugin ecosystem. "
 #                 "\n\n🔹 Common Use Cases:\n"
@@ -403,8 +403,8 @@
 #     },
 #     "Nobara": {
 #         "Git": 
-#             "command: sudo dnf install git\n"
-#             "description:\n"
+#             "Command: sudo dnf install git\n"
+#             "Description:\n"
 #                 "Git is a distributed version control system that tracks changes in source code. "
 #                 "On Ubuntu, Git is widely used by developers to collaborate on projects, manage code revisions, and handle branching and merging. "
 #                 "After installation, remember to configure your user name and email with Git. "
@@ -416,8 +416,8 @@
 #                 "- Check version: `git --version`\n"
 #                 "- Basic config: `git config --global user.name 'Your Name'` and `git config --global user.email 'you@example.com'`",
 #         "Node.js": 
-#             "command: sudo dnf install nodejs\n"
-#             "description:\n"
+#             "Command: sudo dnf install nodejs\n"
+#             "Description:\n"
 #                 "Node.js is a JavaScript runtime that allows developers to execute JavaScript outside of the browser. "
 #                 "On Ubuntu, it's used for backend development, building APIs, and creating real-time applications. "
 #                 "It comes with npm (Node Package Manager) to manage dependencies efficiently. "
@@ -429,8 +429,8 @@
 #                 "- Check version: `node -v`\n"
 #                 "- Install npm if needed: `sudo apt install npm`",
 #         "Docker":
-#             "command: sudo dnf install docker.io\n"
-#             "description: \n"
+#             "Command: sudo dnf install docker.io\n"
+#             "Description: \n"
 #                 "Docker is a containerization platform that packages software and its dependencies into portable containers. "
 #                 "On Ubuntu, Docker helps ensure consistency across development, testing, and production environments by isolating applications. "
 #                 "\n\n🔹 Common Use Cases:\n"
@@ -442,8 +442,8 @@
 #                 "- Enable and start service: `sudo systemctl enable --now docker`\n"
 #                 "- Test run: `sudo docker run hello-world`",
 #         "Python 3": 
-#             "command: sudo dnf install python3\n"
-#             "description: \n"
+#             "Command: sudo dnf install python3\n"
+#             "Description: \n"
 #                 "Python 3 is a high-level programming language renowned for its readability and versatility. "
 #                 "On Ubuntu, it is used for web development, automation, data analysis, and much more. "
 #                 "Its extensive library ecosystem makes Python ideal for both beginners and professionals. "
@@ -455,8 +455,8 @@
 #                 "- Check version: `python3 --version`\n"
 #                 "- Use pip for additional libraries: `sudo apt install python3-pip`",
 #         "Vim": 
-#             "command: sudo dnf install vim\n"
-#             "description:\n"
+#             "Command: sudo dnf install vim\n"
+#             "Description:\n"
 #                 "Vim is a highly efficient text editor that operates within the terminal, offering powerful editing and customization features. "
 #                 "On Ubuntu, Vim is favored by programmers and system administrators for its speed and extensive plugin ecosystem. "
 #                 "\n\n🔹 Common Use Cases:\n"
@@ -469,8 +469,8 @@
 #                 "- Learn the basics with `vimtutor`",    },
 #     "NixOS": {
 #         "Git": 
-#             "command: nix-env -iA nixpkgs.git\n"
-#             "description:\n"
+#             "Command: nix-env -iA nixpkgs.git\n"
+#             "Description:\n"
 #                 "Git is a distributed version control system that tracks changes in source code. "
 #                 "On Ubuntu, Git is widely used by developers to collaborate on projects, manage code revisions, and handle branching and merging. "
 #                 "After installation, remember to configure your user name and email with Git. "
@@ -482,8 +482,8 @@
 #                 "- Check version: `git --version`\n"
 #                 "- Basic config: `git config --global user.name 'Your Name'` and `git config --global user.email 'you@example.com'`",
 #         "Node.js": 
-#             "command: nix-env -iA nixpkgs.nodejs\n"
-#             "description:\n"
+#             "Command: nix-env -iA nixpkgs.nodejs\n"
+#             "Description:\n"
 #                 "Node.js is a JavaScript runtime that allows developers to execute JavaScript outside of the browser. "
 #                 "On Ubuntu, it's used for backend development, building APIs, and creating real-time applications. "
 #                 "It comes with npm (Node Package Manager) to manage dependencies efficiently. "
@@ -495,8 +495,8 @@
 #                 "- Check version: `node -v`\n"
 #                 "- Install npm if needed: `sudo apt install npm`",
 #         "Docker":
-#             "command: nix-env -iA nixpkgs.docker\n"
-#             "description: \n"
+#             "Command: nix-env -iA nixpkgs.docker\n"
+#             "Description: \n"
 #                 "Docker is a containerization platform that packages software and its dependencies into portable containers. "
 #                 "On Ubuntu, Docker helps ensure consistency across development, testing, and production environments by isolating applications. "
 #                 "\n\n🔹 Common Use Cases:\n"
@@ -508,8 +508,8 @@
 #                 "- Enable and start service: `sudo systemctl enable --now docker`\n"
 #                 "- Test run: `sudo docker run hello-world`",
 #         "Python 3": 
-#             "command: nix-env -iA nixpkgs.python3\n"
-#             "description: \n"
+#             "Command: nix-env -iA nixpkgs.python3\n"
+#             "Description: \n"
 #                 "Python 3 is a high-level programming language renowned for its readability and versatility. "
 #                 "On Ubuntu, it is used for web development, automation, data analysis, and much more. "
 #                 "Its extensive library ecosystem makes Python ideal for both beginners and professionals. "
@@ -521,8 +521,8 @@
 #                 "- Check version: `python3 --version`\n"
 #                 "- Use pip for additional libraries: `sudo apt install python3-pip`",
 #         "Vim": 
-#             "command: nix-env -iA nixpkgs.vim\n"
-#             "description:\n"
+#             "Command: nix-env -iA nixpkgs.vim\n"
+#             "Description:\n"
 #                 "Vim is a highly efficient text editor that operates within the terminal, offering powerful editing and customization features. "
 #                 "On Ubuntu, Vim is favored by programmers and system administrators for its speed and extensive plugin ecosystem. "
 #                 "\n\n🔹 Common Use Cases:\n"
@@ -536,8 +536,8 @@
 #     },
 #     "openSUSE": {
 #         "Git": 
-#             "command: sudo zypper install git\n"
-#             "description:\n"
+#             "Command: sudo zypper install git\n"
+#             "Description:\n"
 #                 "Git is a distributed version control system that tracks changes in source code. "
 #                 "On Ubuntu, Git is widely used by developers to collaborate on projects, manage code revisions, and handle branching and merging. "
 #                 "After installation, remember to configure your user name and email with Git. "
@@ -549,8 +549,8 @@
 #                 "- Check version: `git --version`\n"
 #                 "- Basic config: `git config --global user.name 'Your Name'` and `git config --global user.email 'you@example.com'`",
 #         "Node.js": 
-#             "command: sudo zypper install nodejs\n"
-#             "description:\n"
+#             "Command: sudo zypper install nodejs\n"
+#             "Description:\n"
 #                 "Node.js is a JavaScript runtime that allows developers to execute JavaScript outside of the browser. "
 #                 "On Ubuntu, it's used for backend development, building APIs, and creating real-time applications. "
 #                 "It comes with npm (Node Package Manager) to manage dependencies efficiently. "
@@ -562,8 +562,8 @@
 #                 "- Check version: `node -v`\n"
 #                 "- Install npm if needed: `sudo apt install npm`",
 #         "Docker":
-#             "command: sudo zypper install docker.io\n"
-#             "description: \n"
+#             "Command: sudo zypper install docker.io\n"
+#             "Description: \n"
 #                 "Docker is a containerization platform that packages software and its dependencies into portable containers. "
 #                 "On Ubuntu, Docker helps ensure consistency across development, testing, and production environments by isolating applications. "
 #                 "\n\n🔹 Common Use Cases:\n"
@@ -575,8 +575,8 @@
 #                 "- Enable and start service: `sudo systemctl enable --now docker`\n"
 #                 "- Test run: `sudo docker run hello-world`",
 #         "Python 3": 
-#             "command: sudo zypper install python3\n"
-#             "description: \n"
+#             "Command: sudo zypper install python3\n"
+#             "Description: \n"
 #                 "Python 3 is a high-level programming language renowned for its readability and versatility. "
 #                 "On Ubuntu, it is used for web development, automation, data analysis, and much more. "
 #                 "Its extensive library ecosystem makes Python ideal for both beginners and professionals. "
@@ -588,8 +588,8 @@
 #                 "- Check version: `python3 --version`\n"
 #                 "- Use pip for additional libraries: `sudo apt install python3-pip`",
 #         "Vim": 
-#             "command: sudo zypper install vim\n"
-#             "description:\n"
+#             "Command: sudo zypper install vim\n"
+#             "Description:\n"
 #                 "Vim is a highly efficient text editor that operates within the terminal, offering powerful editing and customization features. "
 #                 "On Ubuntu, Vim is favored by programmers and system administrators for its speed and extensive plugin ecosystem. "
 #                 "\n\n🔹 Common Use Cases:\n"
@@ -603,8 +603,8 @@
 #     },
 #     "Manjaro": {
 #         "Git": 
-#             "command: sudo pacman -S git\n"
-#             "description:\n"
+#             "Command: sudo pacman -S git\n"
+#             "Description:\n"
 #                 "Git is a distributed version control system that tracks changes in source code. "
 #                 "On Ubuntu, Git is widely used by developers to collaborate on projects, manage code revisions, and handle branching and merging. "
 #                 "After installation, remember to configure your user name and email with Git. "
@@ -616,8 +616,8 @@
 #                 "- Check version: `git --version`\n"
 #                 "- Basic config: `git config --global user.name 'Your Name'` and `git config --global user.email 'you@example.com'`",
 #         "Node.js": 
-#             "command: sudo pacman -S nodejs\n"
-#             "description:\n"
+#             "Command: sudo pacman -S nodejs\n"
+#             "Description:\n"
 #                 "Node.js is a JavaScript runtime that allows developers to execute JavaScript outside of the browser. "
 #                 "On Ubuntu, it's used for backend development, building APIs, and creating real-time applications. "
 #                 "It comes with npm (Node Package Manager) to manage dependencies efficiently. "
@@ -629,8 +629,8 @@
 #                 "- Check version: `node -v`\n"
 #                 "- Install npm if needed: `sudo apt install npm`",
 #         "Docker":
-#             "command: sudo pacman -S docker\n"
-#             "description: \n"
+#             "Command: sudo pacman -S docker\n"
+#             "Description: \n"
 #                 "Docker is a containerization platform that packages software and its dependencies into portable containers. "
 #                 "On Ubuntu, Docker helps ensure consistency across development, testing, and production environments by isolating applications. "
 #                 "\n\n🔹 Common Use Cases:\n"
@@ -642,8 +642,8 @@
 #                 "- Enable and start service: `sudo systemctl enable --now docker`\n"
 #                 "- Test run: `sudo docker run hello-world`",
 #         "Python 3": 
-#             "command: sudo pacman -S python3\n"
-#             "description: \n"
+#             "Command: sudo pacman -S python3\n"
+#             "Description: \n"
 #                 "Python 3 is a high-level programming language renowned for its readability and versatility. "
 #                 "On Ubuntu, it is used for web development, automation, data analysis, and much more. "
 #                 "Its extensive library ecosystem makes Python ideal for both beginners and professionals. "
@@ -655,8 +655,8 @@
 #                 "- Check version: `python3 --version`\n"
 #                 "- Use pip for additional libraries: `sudo apt install python3-pip`",
 #         "Vim": 
-#             "command: sudo pacman -S vim\n"
-#             "description:\n"
+#             "Command: sudo pacman -S vim\n"
+#             "Description:\n"
 #                 "Vim is a highly efficient text editor that operates within the terminal, offering powerful editing and customization features. "
 #                 "On Ubuntu, Vim is favored by programmers and system administrators for its speed and extensive plugin ecosystem. "
 #                 "\n\n🔹 Common Use Cases:\n"
@@ -670,8 +670,8 @@
 #     },
 #     "EndeavourOS": {
 #         "Git": 
-#             "command: sudo pacman -S git\n"
-#             "description:\n"
+#             "Command: sudo pacman -S git\n"
+#             "Description:\n"
 #                 "Git is a distributed version control system that tracks changes in source code. "
 #                 "On Ubuntu, Git is widely used by developers to collaborate on projects, manage code revisions, and handle branching and merging. "
 #                 "After installation, remember to configure your user name and email with Git. "
@@ -683,8 +683,8 @@
 #                 "- Check version: `git --version`\n"
 #                 "- Basic config: `git config --global user.name 'Your Name'` and `git config --global user.email 'you@example.com'`",
 #         "Node.js": 
-#             "command: sudo pacman -S nodejs\n"
-#             "description:\n"
+#             "Command: sudo pacman -S nodejs\n"
+#             "Description:\n"
 #                 "Node.js is a JavaScript runtime that allows developers to execute JavaScript outside of the browser. "
 #                 "On Ubuntu, it's used for backend development, building APIs, and creating real-time applications. "
 #                 "It comes with npm (Node Package Manager) to manage dependencies efficiently. "
@@ -696,8 +696,8 @@
 #                 "- Check version: `node -v`\n"
 #                 "- Install npm if needed: `sudo apt install npm`",
 #         "Docker":
-#             "command: sudo pacman -S docker\n"
-#             "description: \n"
+#             "Command: sudo pacman -S docker\n"
+#             "Description: \n"
 #                 "Docker is a containerization platform that packages software and its dependencies into portable containers. "
 #                 "On Ubuntu, Docker helps ensure consistency across development, testing, and production environments by isolating applications. "
 #                 "\n\n🔹 Common Use Cases:\n"
@@ -709,8 +709,8 @@
 #                 "- Enable and start service: `sudo systemctl enable --now docker`\n"
 #                 "- Test run: `sudo docker run hello-world`",
 #         "Python 3": 
-#             "command: sudo pacman -S python3\n"
-#             "description: \n"
+#             "Command: sudo pacman -S python3\n"
+#             "Description: \n"
 #                 "Python 3 is a high-level programming language renowned for its readability and versatility. "
 #                 "On Ubuntu, it is used for web development, automation, data analysis, and much more. "
 #                 "Its extensive library ecosystem makes Python ideal for both beginners and professionals. "
@@ -722,8 +722,8 @@
 #                 "- Check version: `python3 --version`\n"
 #                 "- Use pip for additional libraries: `sudo apt install python3-pip`",
 #         "Vim": 
-#             "command: sudo pacman -S vim\n"
-#             "description:\n"
+#             "Command: sudo pacman -S vim\n"
+#             "Description:\n"
 #                 "Vim is a highly efficient text editor that operates within the terminal, offering powerful editing and customization features. "
 #                 "On Ubuntu, Vim is favored by programmers and system administrators for its speed and extensive plugin ecosystem. "
 #                 "\n\n🔹 Common Use Cases:\n"
@@ -737,8 +737,8 @@
 #     },
 #     "Arch Linux": {
 #         "Git": 
-#             "command: sudo pacman -S git\n"
-#             "description:\n"
+#             "Command: sudo pacman -S git\n"
+#             "Description:\n"
 #                 "Git is a distributed version control system that tracks changes in source code. "
 #                 "On Ubuntu, Git is widely used by developers to collaborate on projects, manage code revisions, and handle branching and merging. "
 #                 "After installation, remember to configure your user name and email with Git. "
@@ -750,8 +750,8 @@
 #                 "- Check version: `git --version`\n"
 #                 "- Basic config: `git config --global user.name 'Your Name'` and `git config --global user.email 'you@example.com'`",
 #         "Node.js": 
-#             "command: sudo pacman -S nodejs\n"
-#             "description:\n"
+#             "Command: sudo pacman -S nodejs\n"
+#             "Description:\n"
 #                 "Node.js is a JavaScript runtime that allows developers to execute JavaScript outside of the browser. "
 #                 "On Ubuntu, it's used for backend development, building APIs, and creating real-time applications. "
 #                 "It comes with npm (Node Package Manager) to manage dependencies efficiently. "
@@ -763,8 +763,8 @@
 #                 "- Check version: `node -v`\n"
 #                 "- Install npm if needed: `sudo apt install npm`",
 #         "Docker":
-#             "command: sudo pacman -S docker\n"
-#             "description: \n"
+#             "Command: sudo pacman -S docker\n"
+#             "Description: \n"
 #                 "Docker is a containerization platform that packages software and its dependencies into portable containers. "
 #                 "On Ubuntu, Docker helps ensure consistency across development, testing, and production environments by isolating applications. "
 #                 "\n\n🔹 Common Use Cases:\n"
@@ -776,8 +776,8 @@
 #                 "- Enable and start service: `sudo systemctl enable --now docker`\n"
 #                 "- Test run: `sudo docker run hello-world`",
 #         "Python 3": 
-#             "command: sudo pacman -S python3\n"
-#             "description: \n"
+#             "Command: sudo pacman -S python3\n"
+#             "Description: \n"
 #                 "Python 3 is a high-level programming language renowned for its readability and versatility. "
 #                 "On Ubuntu, it is used for web development, automation, data analysis, and much more. "
 #                 "Its extensive library ecosystem makes Python ideal for both beginners and professionals. "
@@ -789,8 +789,8 @@
 #                 "- Check version: `python3 --version`\n"
 #                 "- Use pip for additional libraries: `sudo apt install python3-pip`",
 #         "Vim": 
-#             "command: sudo pacman -S vim\n"
-#             "description:\n"
+#             "Command: sudo pacman -S vim\n"
+#             "Description:\n"
 #                 "Vim is a highly efficient text editor that operates within the terminal, offering powerful editing and customization features. "
 #                 "On Ubuntu, Vim is favored by programmers and system administrators for its speed and extensive plugin ecosystem. "
 #                 "\n\n🔹 Common Use Cases:\n"
@@ -807,8 +807,8 @@
 PACKAGE_DETAILS = {
     "Web Browsers": {
         "Chromium": 
-            "command: sudo apt install chromium-browser\n"
-            "description:\n"
+            "Command: sudo apt install chromium-browser\n"
+            "Description:\n"
                 "Chromium is an open-source web browser project that serves as the base for Google Chrome. "
                 "It provides a fast and secure browsing experience while maintaining a high level of customizability. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -819,8 +819,8 @@ PACKAGE_DETAILS = {
                 "- Launch: `chromium-browser`\n"
                 "- Check version: `chromium-browser --version`",
         "Google Chrome":
-            "command: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && sudo dpkg -i google-chrome-stable_current_amd64.deb\n"
-            "description:\n"
+            "Command: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && sudo dpkg -i google-chrome-stable_current_amd64.deb\n"
+            "Description:\n"
                 "Google Chrome is a fast and widely used web browser known for its performance, security, and extensive extension support. "
                 "It is popular among developers and casual users alike due to its seamless Google service integration. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -831,8 +831,8 @@ PACKAGE_DETAILS = {
                 "- Launch: `google-chrome`\n"
                 "- Incognito mode: `google-chrome --incognito`",
         "Vivaldi":
-            "command: wget -qO- https://downloads.vivaldi.com/stable/vivaldi-stable_amd64.deb | sudo dpkg -i\n"
-            "description:\n"
+            "Command: wget -qO- https://downloads.vivaldi.com/stable/vivaldi-stable_amd64.deb | sudo dpkg -i\n"
+            "Description:\n"
                 "Vivaldi is a privacy-focused and highly customizable web browser with built-in features like a notes manager, screenshot tool, and tab stacking. "
                 "It offers a unique browsing experience tailored to power users. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -843,8 +843,8 @@ PACKAGE_DETAILS = {
                 "- Launch: `vivaldi`\n"
                 "- Enable dark mode: `vivaldi --force-dark-mode`",
         "Opera": 
-            "command: wget -qO- https://download3.operacdn.com/pub/opera/desktop/109.0.5097.41/linux/opera-stable_109.0.5097.41_amd64.deb | sudo dpkg -i -\n"
-            "description:\n"
+            "Command: wget -qO- https://download3.operacdn.com/pub/opera/desktop/109.0.5097.41/linux/opera-stable_109.0.5097.41_amd64.deb | sudo dpkg -i -\n"
+            "Description:\n"
                 "Opera is a fast and feature-rich web browser with a built-in VPN, ad blocker, and sidebar integrations for chat apps like WhatsApp and Messenger. "
                 "It offers a clean user interface, customizable workspaces, and speed optimizations for modern browsing. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -856,23 +856,21 @@ PACKAGE_DETAILS = {
                 "- Enable VPN: Go to `Settings > Privacy & Security > Enable VPN`\n"
                 "- Speed Dial: Customize homepage shortcuts with `opera://startpage`",
         "Brave": 
-            "command: sudo apt install curl && curl -fsSL https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo tee /usr/share/keyrings/brave-browser-archive-keyring.gpg > /dev/null && "
-            "echo 'deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main' | sudo tee /etc/apt/sources.list.d/brave-browser-release.list && "
-            "sudo apt update && sudo apt install brave-browser\n"
-            "description:\n"
+            "Command: curl -fsSL https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt update && sudo apt install brave-browser\n"
+            "Description:\n" 
                 "Brave is a privacy-focused web browser designed to block ads and trackers by default. "
-                "It features a built-in Tor mode for anonymous browsing, Brave Rewards for earning cryptocurrency through privacy-friendly ads, and strong security measures. "
-                "\n\n🔹 Common Use Cases:\n"
+                "It features a built-in Tor mode for anonymous browsing, Brave Rewards for earning cryptocurrency through privacy-friendly ads, and strong security measures.\n"
+                "\n🔹 Common Use Cases:\n"
                 "- Private browsing with built-in ad and tracker blocking\n"
                 "- Anonymous browsing with Brave's built-in Tor window\n"
                 "- Earning cryptocurrency (BAT) through Brave Rewards\n"
-                "\n⚡ Extra Notes:\n"
+                "\n⚡ Extra Notes:"
                 "- Launch: `brave-browser`\n"
                 "- Open in private mode: `brave-browser --incognito`\n"
                 "- Enable Tor mode: Open a new private window with Tor via `Menu > New Private Window with Tor`",
         "Zen Browser": 
-            "command: (No official package; download manually from https://zenbrowser.com)\n"
-            "description:\n"
+            "Command: (No official package; download manually from https://zen-browser.app)\n"
+            "Description:\n"
                 "Zen Browser is a lightweight, privacy-oriented browser focused on minimalism and distraction-free browsing. "
                 "It is designed for users who prioritize simplicity, security, and low system resource usage. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -880,14 +878,13 @@ PACKAGE_DETAILS = {
                 "- Privacy-focused web surfing with minimal tracking\n"
                 "- Low resource consumption for improved performance on older hardware\n"
                 "\n⚡ Extra Notes:\n"
-                "- No official Linux package; use AppImage or install manually from their website\n"
                 "- Check settings for customization options like dark mode and script blocking",
     },
 
     "Development": {
         "git":
-            "command: sudo apt install git\n"
-            "description:\n"
+            "Command: sudo apt install git\n"
+            "Description:\n"
                 "Git is a distributed version control system that tracks changes in source code, enabling collaboration and efficient project management. "
                 "It is a must-have tool for developers working in teams. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -898,8 +895,8 @@ PACKAGE_DETAILS = {
                 "- Check version: `git --version`\n"
                 "- Configure: `git config --global user.name 'Your Name'`",
         "vim":
-            "command: sudo apt install vim\n"
-            "description:\n"
+            "Command: sudo apt install vim\n"
+            "Description:\n"
                 "Vim is a highly customizable text editor built for efficiency and speed. "
                 "It is widely used for programming, scripting, and server administration. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -910,22 +907,22 @@ PACKAGE_DETAILS = {
                 "- Open a file: `vim filename`\n"
                 "- Exit: Press `Esc`, then type `:q!` to quit without saving or `:wq` to save and exit.",
         "Emacs": 
-            "command: sudo apt install emacs\n"
-            "description:\n"
+            "Command: sudo apt install emacs\n"
+            "Description:\n"
                 "Emacs is a powerful, extensible, and customizable text editor that serves as an IDE, file manager, email client, and more. "
                 "It supports thousands of extensions, making it highly versatile for programming, note-taking, and system administration. "
                 "\n\n🔹 Common Use Cases:\n"
                 "- Writing and editing code with built-in syntax highlighting\n"
                 "- Using `org-mode` for efficient note-taking and project management\n"
-                "- Running shell commands and managing files without leaving Emacs\n"
+                "- Running shell Commands and managing files without leaving Emacs\n"
                 "\n⚡ Extra Notes:\n"
                 "- Launch: `emacs`\n"
                 "- Exit Emacs: Press `Ctrl + X` then `Ctrl + C`\n"
                 "- Open tutorial: Run `emacs` and type `Ctrl + H` then `T`\n"
                 "- Use Evil Mode for Vim keybindings: `M-x package-install RET evil RET`",      
         "Make": 
-            "command: sudo apt install make\n"
-            "description:\n"
+            "Command: sudo apt install make\n"
+            "Description:\n"
                 "Make is a build automation tool used to compile and link programs efficiently. "
                 "It processes `Makefile` instructions to determine which parts of a program need recompiling and executes only the necessary tasks. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -937,8 +934,8 @@ PACKAGE_DETAILS = {
                 "- Run Makefile: `make`\n"
                 "- Debug Makefile execution: `make --debug=v`",       
         "CMake": 
-            "command: sudo apt install cmake\n"
-            "description:\n"
+            "Command: sudo apt install cmake\n"
+            "Description:\n"
                 "CMake is a cross-platform build system generator that simplifies project compilation across multiple environments. "
                 "It automates the process of generating Makefiles or project files for compilers like GCC, Clang, and MSVC. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -951,8 +948,8 @@ PACKAGE_DETAILS = {
                 "- Build project: `cmake --build .`\n"
                 "- Clean build files: `rm -rf CMakeCache.txt CMakeFiles`", 
         "Python3-pip": 
-            "command: sudo apt install python3-pip\n"
-            "description:\n"
+            "Command: sudo apt install python3-pip\n"
+            "Description:\n"
                 "pip is the package manager for Python that simplifies the installation, upgrading, and removal of Python libraries. "
                 "It allows developers to easily manage dependencies and install packages from the Python Package Index (PyPI). "
                 "\n\n🔹 Common Use Cases:\n"
@@ -968,24 +965,24 @@ PACKAGE_DETAILS = {
 
     "Networking": {
         "curl":
-            "command: sudo apt install curl\n"
-            "description:\n"
-                "cURL is a command-line tool for transferring data using various network protocols such as HTTP, HTTPS, FTP, and more. "
+            "Command: sudo apt install curl\n"
+            "Description:\n"
+                "cURL is a Command-line tool for transferring data using various network protocols such as HTTP, HTTPS, FTP, and more. "
                 "It is commonly used for API interactions, file downloads, and debugging network issues. "
                 "\n\n🔹 Common Use Cases:\n"
                 "- Downloading files from a remote server\n"
                 "- Testing APIs and web requests\n"
-                "- Fetching web pages via command-line\n"
+                "- Fetching web pages via Command-line\n"
                 "\n⚡ Extra Notes:\n"
                 "- Fetch URL: `curl https://example.com`\n"
                 "- Save output: `curl -o file.html https://example.com`",
         "wget": 
-            "command: sudo apt install wget\n"
-            "description:\n"
-                "wget is a command-line utility for downloading files from the internet using HTTP, HTTPS, and FTP protocols. "
+            "Command: sudo apt install wget\n"
+            "Description:\n"
+                "wget is a Command-line utility for downloading files from the internet using HTTP, HTTPS, and FTP protocols. "
                 "It supports recursive downloads, resuming interrupted downloads, and downloading entire websites. "
                 "\n\n🔹 Common Use Cases:\n"
-                "- Downloading files directly from the command line\n"
+                "- Downloading files directly from the Command line\n"
                 "- Automating downloads in scripts\n"
                 "- Mirroring websites for offline access\n"
                 "\n⚡ Extra Notes:\n"
@@ -993,8 +990,8 @@ PACKAGE_DETAILS = {
                 "- Resume a broken download: `wget -c <URL>`\n"
                 "- Download multiple files: `wget -i filelist.txt`",
         "net-tools": 
-            "command: sudo apt install net-tools\n"
-            "description:\n"
+            "Command: sudo apt install net-tools\n"
+            "Description:\n"
                 "net-tools is a package that provides essential networking utilities, including `ifconfig`, `netstat`, and `route`. "
                 "It helps diagnose network issues, monitor network traffic, and configure network interfaces. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -1006,8 +1003,8 @@ PACKAGE_DETAILS = {
                 "- View open ports: `netstat -tulnp`\n"
                 "- Display routing table: `route -n`",
         "traceroute": 
-            "command: sudo apt install traceroute\n"
-            "description:\n"
+            "Command: sudo apt install traceroute\n"
+            "Description:\n"
                 "traceroute is a diagnostic tool that maps the path packets take from a local system to a remote host. "
                 "It identifies network latency and routing issues by displaying each hop along the route. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -1019,8 +1016,8 @@ PACKAGE_DETAILS = {
                 "- Use TCP instead of UDP: `traceroute -T example.com`\n"
                 "- Increase the number of probes: `traceroute -q 5 example.com`",
         "ping": 
-            "command: sudo apt install iputils-ping\n"
-            "description:\n"
+            "Command: sudo apt install iputils-ping\n"
+            "Description:\n"
                 "ping is a network utility that tests connectivity between two devices using ICMP echo requests. "
                 "It measures response time and helps troubleshoot network reachability issues. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -1035,8 +1032,8 @@ PACKAGE_DETAILS = {
 
     "IDEs": {
         "Visual Studio Code":
-            "command: sudo snap install code --classic\n"
-            "description:\n"
+            "Command: sudo snap install code --classic\n"
+            "Description:\n"
                 "VS Code is a lightweight yet powerful code editor with built-in Git support, debugging tools, and an extensive extension marketplace. "
                 "It is widely used for software development across multiple languages. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -1047,8 +1044,8 @@ PACKAGE_DETAILS = {
                 "- Launch: `code`\n"
                 "- Install extensions from the marketplace.",
         "PyCharm": 
-            "command: sudo snap install pycharm-community --classic\n"
-            "description:\n"
+            "Command: sudo snap install pycharm-community --classic\n"
+            "Description:\n"
                 "PyCharm is a powerful Python IDE developed by JetBrains, featuring intelligent code assistance, debugging, and integration with frameworks like Django and Flask. "
                 "It enhances productivity with code completion, error highlighting, and built-in tools for testing. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -1060,8 +1057,8 @@ PACKAGE_DETAILS = {
                 "- Install plugins: Navigate to `Settings > Plugins`\n"
                 "- Enable virtualenv: `Settings > Project > Python Interpreter`",
         "IntelliJ IDEA": 
-            "command: sudo snap install intellij-idea-community --classic\n"
-            "description:\n"
+            "Command: sudo snap install intellij-idea-community --classic\n"
+            "Description:\n"
                 "IntelliJ IDEA is a Java-centric IDE by JetBrains, offering advanced code completion, debugging, and refactoring tools. "
                 "It supports multiple languages, integrates with build tools like Maven and Gradle, and provides a smooth development experience. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -1073,8 +1070,8 @@ PACKAGE_DETAILS = {
                 "- Open an existing project: `File > Open`\n"
                 "- Debug a Java application: `Run > Debug`",
         "Eclipse": 
-            "command: sudo snap install eclipse --classic\n"
-            "description:\n"
+            "Command: sudo snap install eclipse --classic\n"
+            "Description:\n"
                 "Eclipse is an open-source IDE primarily used for Java development, but it also supports Python, C++, and web technologies through plugins. "
                 "It includes powerful refactoring tools, a built-in debugger, and extensive customization options. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -1086,8 +1083,8 @@ PACKAGE_DETAILS = {
                 "- Install new plugins: `Help > Eclipse Marketplace`\n"
                 "- Configure workspaces: `File > Switch Workspace`",
         "Android Studio": 
-            "command: sudo snap install android-studio --classic\n"
-            "description:\n"
+            "Command: sudo snap install android-studio --classic\n"
+            "Description:\n"
                 "Android Studio is the official IDE for Android development, providing a rich UI editor, code completion, and emulator support. "
                 "It integrates with Gradle for project builds and supports Kotlin, Java, and Flutter development. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -1099,8 +1096,8 @@ PACKAGE_DETAILS = {
                 "- Create a new project: `File > New Project`\n"
                 "- Run app on emulator: `Tools > AVD Manager`",
         "WebStorm": 
-            "command: sudo snap install webstorm --classic\n"
-            "description:\n"
+            "Command: sudo snap install webstorm --classic\n"
+            "Description:\n"
                 "WebStorm is a JetBrains IDE for web development, offering intelligent code completion, debugging, and Git integration. "
                 "It supports JavaScript, TypeScript, React, Angular, and Vue.js. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -1112,8 +1109,8 @@ PACKAGE_DETAILS = {
                 "- Install extensions: `Settings > Plugins`\n"
                 "- Use live templates for faster coding",
         "Cursor": 
-            "command: Not available in official repositories, download from official website\n"
-            "description:\n"
+            "Command: Not available in official repositories, download from official website\n"
+            "Description:\n"
                 "Cursor is an AI-powered code editor designed for efficient coding with real-time suggestions and AI-assisted debugging. "
                 "It integrates with popular version control systems and enhances productivity for modern developers. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -1128,8 +1125,8 @@ PACKAGE_DETAILS = {
 
     "Multimedia": {
         "Spotify": 
-            "command: sudo snap install spotify\n"
-            "description:\n"
+            "Command: sudo snap install spotify\n"
+            "Description:\n"
                 "Spotify is a digital music streaming service that provides access to millions of songs, podcasts, and playlists. "
                 "It offers both free and premium subscriptions with offline listening and ad-free experiences. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -1141,8 +1138,8 @@ PACKAGE_DETAILS = {
                 "- Sign in with your Spotify account to sync playlists\n"
                 "- Adjust audio quality in `Settings > Music Quality`",
         "Discord": 
-            "command: sudo snap install discord\n"
-            "description:\n"
+            "Command: sudo snap install discord\n"
+            "Description:\n"
                 "Discord is a popular VoIP, instant messaging, and digital distribution platform for communities and gamers. "
                 "It supports voice channels, text chats, and screen sharing. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -1151,11 +1148,11 @@ PACKAGE_DETAILS = {
                 "- Organizing communities via Discord servers\n"
                 "\n⚡ Extra Notes:\n"
                 "- Launch: `discord`\n"
-                "- Use `/` commands for quick actions\n"
+                "- Use `/` Commands for quick actions\n"
                 "- Customize notifications in `User Settings > Notifications`",
         "VLC":
-            "command: sudo apt install vlc\n"
-            "description:\n"
+            "Command: sudo apt install vlc\n"
+            "Description:\n"
                 "VLC is an open-source, cross-platform media player that supports a wide variety of audio and video formats. "
                 "It is known for its ability to play almost any media file. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -1166,8 +1163,8 @@ PACKAGE_DETAILS = {
                 "- Launch: `vlc`\n"
                 "- Convert files: `vlc -I dummy input.mp4 --sout='#transcode{vcodec=h264}:std{access=file,dst=output.mp4}' vlc://quit`",
         "mpv": 
-            "command: sudo apt install mpv\n"
-            "description:\n"
+            "Command: sudo apt install mpv\n"
+            "Description:\n"
                 "mpv is a lightweight, open-source media player based on MPlayer and mplayer2. "
                 "It supports a wide range of video and audio formats with GPU acceleration. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -1179,8 +1176,8 @@ PACKAGE_DETAILS = {
                 "- Stream online videos: `mpv <URL>`\n"
                 "- Enable subtitles automatically: `mpv --sub-auto=fuzzy video.mp4`",
         "Audacity": 
-            "command: sudo apt install audacity\n"
-            "description:\n"
+            "Command: sudo apt install audacity\n"
+            "Description:\n"
                 "Audacity is a free, open-source audio editing software used for recording, editing, and processing audio. "
                 "It supports multi-track editing, effects, and plugins. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -1192,9 +1189,9 @@ PACKAGE_DETAILS = {
                 "- Import audio: `File > Import`\n"
                 "- Apply effects: `Effects > Equalization, Noise Reduction`",
         "ffmpeg": 
-            "command: sudo apt install ffmpeg\n"
-            "description:\n"
-                "ffmpeg is a powerful command-line tool for processing video and audio files. "
+            "Command: sudo apt install ffmpeg\n"
+            "Description:\n"
+                "ffmpeg is a powerful Command-line tool for processing video and audio files. "
                 "It can convert, record, and stream multimedia files with support for multiple codecs. "
                 "\n\n🔹 Common Use Cases:\n"
                 "- Converting video formats (MP4, MKV, AVI, etc.)\n"
@@ -1208,20 +1205,20 @@ PACKAGE_DETAILS = {
 
     "Terminals": {
         "Kitty":
-            "command: sudo apt install kitty\n"
-            "description:\n"
+            "Command: sudo apt install kitty\n"
+            "Description:\n"
                 "Kitty is a fast, feature-rich terminal emulator with GPU acceleration and advanced text rendering. "
                 "It is highly customizable and supports tabs, splits, and scripting. "
                 "\n\n🔹 Common Use Cases:\n"
-                "- Running shell commands efficiently\n"
+                "- Running shell Commands efficiently\n"
                 "- Handling multiple terminal tabs/splits\n"
                 "- Using hardware acceleration for faster rendering\n"
                 "\n⚡ Extra Notes:\n"
                 "- Launch: `kitty`\n"
                 "- Customize config: `~/.config/kitty/kitty.conf`",
        "Alacritty": 
-            "command: sudo apt install alacritty\n"
-            "description:\n"
+            "Command: sudo apt install alacritty\n"
+            "Description:\n"
                 "Alacritty is a GPU-accelerated terminal emulator known for its speed and simplicity. "
                 "It supports OpenGL rendering for fast performance. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -1233,8 +1230,8 @@ PACKAGE_DETAILS = {
                 "- Customize: Edit `~/.config/alacritty/alacritty.yml`\n"
                 "- Increase font size: `Ctrl + Shift + Plus`",
         "Wezterm": 
-            "command: Download from https://wezfurlong.org/wezterm/\n"
-            "description:\n"
+            "Command: Download from https://wezfurlong.org/wezterm/\n"
+            "Description:\n"
                 "WezTerm is a modern, GPU-accelerated terminal emulator with support for tabs, multiplexing, and SSH integration. "
                 "It is highly configurable and supports features like ligatures and remote connections. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -1249,8 +1246,8 @@ PACKAGE_DETAILS = {
 
     "Graphics": {
         "Okular": 
-            "command: sudo apt install okular\n"
-            "description:\n"
+            "Command: sudo apt install okular\n"
+            "Description:\n"
                 "Okular is a versatile document viewer developed by KDE. "
                 "It supports multiple file formats, including PDF, EPUB, DjVu, and more. "
                 "With its annotation and text extraction features, Okular is ideal for both casual reading and professional document management. "
@@ -1263,8 +1260,8 @@ PACKAGE_DETAILS = {
                 "- Use `F6` to activate annotation tools\n"
                 "- Search within documents using `Ctrl + F`",
         "Scribus": 
-            "command: sudo apt install scribus\n"
-            "description:\n"
+            "Command: sudo apt install scribus\n"
+            "Description:\n"
                 "Scribus is an open-source desktop publishing (DTP) application used for creating professional-quality layouts. "
                 "It is ideal for designing magazines, brochures, flyers, and books, offering advanced typography and PDF export features. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -1273,11 +1270,10 @@ PACKAGE_DETAILS = {
                 "- Producing newsletters, posters, and business cards\n"
                 "\n⚡ Extra Notes:\n"
                 "- Launch: `scribus`\n"
-                "- Use `File > Export` to generate high-resolution PDFs\n"
                 "- Enable color management for print design under `Preferences > Color Management`",
         "Gimp":
-            "command: sudo apt install gimp\n"
-            "description:\n"
+            "Command: sudo apt install gimp\n"
+            "Description:\n"
                 "GIMP (GNU Image Manipulation Program) is a powerful open-source image editor, comparable to Photoshop. "
                 "It is used for photo retouching, image composition, and graphic design. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -1288,8 +1284,8 @@ PACKAGE_DETAILS = {
                 "- Launch: `gimp`\n"
                 "- Supports plugins and scripting with Python.",
         "Inkscape": 
-            "command: sudo apt install inkscape\n"
-            "description:\n"
+            "Command: sudo apt install inkscape\n"
+            "Description:\n"
                 "Inkscape is a professional vector graphics editor for creating illustrations, icons, logos, and more. "
                 "It supports SVG and various export formats. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -1301,8 +1297,8 @@ PACKAGE_DETAILS = {
                 "- Save projects in `.svg` format for scalability\n"
                 "- Use `Extensions > Color > Remove Background` to edit images",
         "Blender": 
-            "command: sudo apt install blender\n"
-            "description:\n"
+            "Command: sudo apt install blender\n"
+            "Description:\n"
                 "Blender is an open-source 3D modeling and animation software. "
                 "It supports rendering, sculpting, simulation, and video editing. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -1314,14 +1310,14 @@ PACKAGE_DETAILS = {
                 "- Use `E` for extrude and `Ctrl + R` for edge loops\n"
                 "- Enable GPU rendering for faster processing",
         "ImageMagick": 
-            "command: sudo apt install imagemagick\n"
-            "description:\n"
-                "ImageMagick is a powerful command-line tool for editing, converting, and processing images. "
+            "Command: sudo apt install imagemagick\n"
+            "Description:\n"
+                "ImageMagick is a powerful Command-line tool for editing, converting, and processing images. "
                 "It supports a wide range of image formats and can perform batch operations efficiently. "
                 "\n\n🔹 Common Use Cases:\n"
                 "- Converting images between different formats (PNG, JPEG, TIFF, etc.)\n"
                 "- Resizing and compressing images for web optimization\n"
-                "- Applying filters and effects via command-line scripts\n"
+                "- Applying filters and effects via Command-line scripts\n"
                 "\n⚡ Extra Notes:\n"
                 "- Convert images: `convert input.png output.jpg`\n"
                 "- Resize images: `convert input.jpg -resize 800x600 output.jpg`\n"
@@ -1330,8 +1326,8 @@ PACKAGE_DETAILS = {
 
     "System Tools": {
         "Gparted":
-            "command: sudo apt install gparted\n"
-            "description:\n"
+            "Command: sudo apt install gparted\n"
+            "Description:\n"
                 "GParted is a powerful partition manager that allows users to create, resize, and manage disk partitions. "
                 "It is widely used for disk maintenance and system recovery. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -1342,8 +1338,8 @@ PACKAGE_DETAILS = {
                 "- Launch: `gparted`\n"
                 "- Requires root privileges to modify partitions.",
         "Disks": 
-            "command: sudo apt install gnome-disk-utility\n"
-            "description:\n"
+            "Command: sudo apt install gnome-disk-utility\n"
+            "Description:\n"
                 "GNOME Disks is a graphical tool for managing hard drives and partitions. "
                 "It allows users to format, mount, and benchmark disks easily. "
                 "\n\n🔹 Common Use Cases:\n"
@@ -1354,10 +1350,9 @@ PACKAGE_DETAILS = {
                 "- Launch: `gnome-disks`\n"
                 "- Create a bootable USB: `Restore Disk Image > Select ISO`\n"
                 "- Run performance benchmark: `Disks > Benchmark`",
-
         "BleachBit": 
-            "command: sudo apt install bleachbit\n"
-            "description:\n"
+            "Command: sudo apt install bleachbit\n"
+            "Description:\n"
                 "BleachBit is a disk cleaning utility that frees up space and protects privacy by removing unnecessary files. "
                 "It cleans system caches, logs, and temporary files. "
                 "\n\n🔹 Common Use Cases:\n"

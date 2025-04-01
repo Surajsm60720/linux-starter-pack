@@ -117,7 +117,7 @@ class CategorySelectScreen(Screen):
 
     def action_select_category(self) -> None:
         selected_category = list(CATEGORIES_LIST.keys())[self.selected_index]
-        self.app.push_screen(PackageSelectorScreen(selected_category, self.selected_distro))
+        self.app.push_screen(PackageSelectorScreen(selected_category))
 
     def action_quit(self) -> None:
         self.app.exit()
