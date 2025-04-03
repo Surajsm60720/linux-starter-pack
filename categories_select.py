@@ -67,8 +67,6 @@ class CategorySelectScreen(Screen):
     }
     """
 
-
-
     selected_index = reactive(0)
     selected_distro = ""
     cart = reactive([])  # Shared cart state
@@ -85,7 +83,8 @@ class CategorySelectScreen(Screen):
                 self.details_panel = Static(self.get_selected_category_info(), id="details")
                 yield self.details_panel
             with Container(id="bottom-right"):
-                yield Static("Here comes the cart items")
+                self.cart_display = Static("Cart:\n", id="cart-display")  # Add a Static widget for the cart
+                yield self.cart_display
 
         yield Footer()
 
@@ -108,6 +107,10 @@ class CategorySelectScreen(Screen):
         self.category_options[self.selected_index].add_class("selected")
 
         self.details_panel.update(self.get_selected_category_info())
+    
+    def cart_display(self) -> None:
+        cart_items = "\n".join(f"- {pkg}" for pkg in self.cart)
+        self.cart_display.update(f"Cart:\n{cart_items}")
 
     def action_select_previous(self) -> None:
         if self.selected_index > 0:
@@ -119,16 +122,18 @@ class CategorySelectScreen(Screen):
             self.selected_index += 1
             self.update_selection()
 
-    # def action_select_category(self) -> None:
-    #     selected_category = list(CATEGORIES_LIST.keys())[self.selected_index]
-    #     self.app.push_screen(PackageSelectorScreen(selected_category))
-
     def action_select_category(self) -> None:
         selected_category = list(CATEGORIES_LIST.keys())[self.selected_index]
         package_screen = PackageSelectorScreen(selected_category)
         package_screen.cart = self.cart  # Pass cart state
         package_screen.selected_distro = self.selected_distro
+
+        # Push the package screen
         self.app.push_screen(package_screen)
+
+    def on_resume(self) -> None:
+        """Called when returning to this screen."""
+        self.cart_display()
         
     def action_quit(self) -> None:
         self.app.exit()

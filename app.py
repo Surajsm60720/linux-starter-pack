@@ -4,6 +4,7 @@ from textual.containers import VerticalScroll, Center
 from textual.screen import Screen
 from distro import DistroOption, DistroSelectScreen
 import pyfiglet
+from confirm_screen import ConfirmationScreen
 
 ascii_text = pyfiglet.figlet_format("Linux Starter Pack", font = "stop")
 

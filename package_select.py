@@ -6,6 +6,8 @@ from textual.reactive import reactive
 from packages import PACKAGE_DETAILS
 from distro_package_managers import DISTRO_PACKAGE_MANAGERS
 import os
+from load_installation_commands import load_installation_commands
+from distros.ubuntu import INSTALLATION_COMMANDS
 
 class PackageSelectorScreen(Screen):
 
@@ -117,18 +119,27 @@ class PackageSelectorScreen(Screen):
         self.cart_display.update(f"Cart:\n{cart_items}")  # Update the Static widget
 
     def update_bash_script(self, package_name: str, add: bool) -> None:
-        package_manager = DISTRO_PACKAGE_MANAGERS.get(self.app.selected_distro, "apt")
-        if add:
-            command = f"sudo {package_manager} install -y {package_name}\n"
-            with open(self.app.script_path, "a") as script_file:
-                script_file.write(command)
-        else:
-            with open(self.app.script_path, "r") as script_file:
-                lines = script_file.readlines()
-            with open(self.app.script_path, "w") as script_file:
-                for line in lines:
-                    if package_name not in line:
-                        script_file.write(line)
+            # Retrieve the commands for the selected package
+            package_steps = INSTALLATION_COMMANDS.get(package_name, [])
+
+            if add:
+                # Append the commands to the script
+                with open(self.app.script_path, "a") as script_file:
+                    for step in package_steps:
+                        script_file.write(f"{step}\n")
+            else:
+                # Remove the package's commands from the script
+                with open(self.app.script_path, "r") as script_file:
+                    lines = script_file.readlines()
+                with open(self.app.script_path, "w") as script_file:
+                    skip = False
+                    for line in lines:
+                        if any(step in line for step in package_steps):
+                            skip = True
+                        elif skip and line.strip() == "":
+                            skip = False
+                        else:
+                            script_file.write(line)
 
     def get_selected_command(self) -> str:
         package_name = list(PACKAGE_DETAILS[self.selected_category].keys())[self.selected_index]
