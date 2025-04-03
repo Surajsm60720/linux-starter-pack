@@ -5,6 +5,7 @@ from textual.containers import Container, VerticalScroll
 from textual.reactive import reactive
 from categories import CATEGORIES_LIST 
 from package_select import PackageSelectorScreen 
+from distro_package_managers import DISTRO_PACKAGE_MANAGERS
 
 class CategoryOption(Markdown):
     
@@ -66,8 +67,11 @@ class CategorySelectScreen(Screen):
     }
     """
 
+
+
     selected_index = reactive(0)
     selected_distro = ""
+    cart = reactive([])  # Shared cart state
 
     def compose(self) -> ComposeResult:
         with Container(id="app-grid"):
@@ -115,10 +119,17 @@ class CategorySelectScreen(Screen):
             self.selected_index += 1
             self.update_selection()
 
+    # def action_select_category(self) -> None:
+    #     selected_category = list(CATEGORIES_LIST.keys())[self.selected_index]
+    #     self.app.push_screen(PackageSelectorScreen(selected_category))
+
     def action_select_category(self) -> None:
         selected_category = list(CATEGORIES_LIST.keys())[self.selected_index]
-        self.app.push_screen(PackageSelectorScreen(selected_category))
-
+        package_screen = PackageSelectorScreen(selected_category)
+        package_screen.cart = self.cart  # Pass cart state
+        package_screen.selected_distro = self.selected_distro
+        self.app.push_screen(package_screen)
+        
     def action_quit(self) -> None:
         self.app.exit()
 

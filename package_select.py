@@ -4,6 +4,8 @@ from textual.containers import Container, Horizontal, VerticalScroll
 from textual.screen import Screen
 from textual.reactive import reactive
 from packages import PACKAGE_DETAILS
+from distro_package_managers import DISTRO_PACKAGE_MANAGERS
+import os
 
 class PackageSelectorScreen(Screen):
 
@@ -12,6 +14,7 @@ class PackageSelectorScreen(Screen):
         super().__init__()
 
     selected_distro = ""
+    cart = reactive([])
 
     CSS = """
     #package-option {
@@ -76,7 +79,8 @@ class PackageSelectorScreen(Screen):
                 self.command_panel = Static(self.get_selected_command(), id="commands")
                 yield self.command_panel
             with Container(id="bottom-right"):
-                yield Static("Here comes app cart items")
+                self.cart_display = Static("Cart:\n", id="cart-display")  # Use Static for cart
+                yield self.cart_display
 
         yield Footer()
     
@@ -85,7 +89,46 @@ class PackageSelectorScreen(Screen):
         ("q", "quit", "Quit"),
         ("up", "select_previous", "Select Previous Package"),
         ("down", "select_next", "Select Next Package"),
+        ("enter", "add_to_cart", "Add Package to Cart"),
+        ("r", "remove_from_cart", "Remove Package from Cart"),
+        ("c", "confirm_selection", "Confirm Selection"),
     ]
+
+    def action_add_to_cart(self) -> None:
+        package_name = list(PACKAGE_DETAILS[self.selected_category].keys())[self.selected_index]
+        self.update_cart(package_name, add=True)
+
+    def action_remove_from_cart(self) -> None:
+        package_name = list(PACKAGE_DETAILS[self.selected_category].keys())[self.selected_index]
+        self.update_cart(package_name, add=False)
+
+    def update_cart(self, package_name: str, add: bool) -> None:
+        if add:
+            if package_name not in self.cart:
+                self.cart.append(package_name)
+                self.update_bash_script(package_name, add=True)
+        else:
+            if package_name in self.cart:
+                self.cart.remove(package_name)
+                self.update_bash_script(package_name, add=False)
+
+        # Update cart display
+        cart_items = "\n".join(self.cart)
+        self.cart_display.update(f"Cart:\n{cart_items}")  # Update the Static widget
+
+    def update_bash_script(self, package_name: str, add: bool) -> None:
+        package_manager = DISTRO_PACKAGE_MANAGERS.get(self.app.selected_distro, "apt")
+        if add:
+            command = f"sudo {package_manager} install -y {package_name}\n"
+            with open(self.app.script_path, "a") as script_file:
+                script_file.write(command)
+        else:
+            with open(self.app.script_path, "r") as script_file:
+                lines = script_file.readlines()
+            with open(self.app.script_path, "w") as script_file:
+                for line in lines:
+                    if package_name not in line:
+                        script_file.write(line)
 
     def get_selected_command(self) -> str:
         package_name = list(PACKAGE_DETAILS[self.selected_category].keys())[self.selected_index]
@@ -108,6 +151,10 @@ class PackageSelectorScreen(Screen):
         if self.selected_index < len(self.package_options) - 1:
             self.selected_index += 1
             self.update_selection()
+    
+    def action_confirm_selection(self) -> None:
+        self.app.selected_packages = self.cart  # Pass selected packages to the app
+        self.app.show_confirmation_screen()
     
     def action_quit(self) -> None:
         self.app.exit()

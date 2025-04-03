@@ -61,8 +61,18 @@ class App(App):
 
     def on_mount(self) -> None:
         self.selected_distro = None
+        self.selected_packages = []
+        self.script_path = "install_packages.sh"
         self.push_screen("welcome")
 
+    # Initialize bash script
+        script_path = "install_packages.sh"
+        with open(script_path, "w") as script_file:
+            script_file.write("#!/bin/bash\n\n")
+            script_file.write("echo 'Starting package installation...'\n")
+    
+    def show_confirmation_screen(self) -> None:
+        self.push_screen(ConfirmationScreen(self.selected_packages, self.script_path))
 
 if __name__ == "__main__":
     App().run()             
