@@ -5,6 +5,7 @@ from textual.screen import Screen
 from distro import DistroOption, DistroSelectScreen
 import pyfiglet
 from confirm_screen import ConfirmationScreen
+from shared_types import SharedCart
 
 ascii_text = pyfiglet.figlet_format("Linux Starter Pack", font = "stop")
 
@@ -62,18 +63,19 @@ class App(App):
 
     def on_mount(self) -> None:
         self.selected_distro = None
+        SharedCart.clear()  # Initialize shared cart
         self.selected_packages = []
         self.script_path = "install_packages.sh"
         self.push_screen("welcome")
 
-    # Initialize bash script
-        script_path = "install_packages.sh"
-        with open(script_path, "w") as script_file:
+        # Initialize bash script
+        with open(self.script_path, "w") as script_file:
             script_file.write("#!/bin/bash\n\n")
             script_file.write("echo 'Starting package installation...'\n")
     
     def show_confirmation_screen(self) -> None:
+        self.selected_packages = SharedCart.get_items()  # Use SharedCart method
         self.push_screen(ConfirmationScreen(self.selected_packages, self.script_path))
 
 if __name__ == "__main__":
-    App().run()             
+    App().run()

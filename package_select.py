@@ -5,7 +5,7 @@ from textual.screen import Screen
 from textual.reactive import reactive
 from packages import PACKAGE_DETAILS
 from distro_package_managers import DISTRO_PACKAGE_MANAGERS
-import os
+from shared_types import SharedCart
 from load_installation_commands import load_installation_commands
 from distros.ubuntu import INSTALLATION_COMMANDS
 
@@ -81,13 +81,13 @@ class PackageSelectorScreen(Screen):
                 self.command_panel = Static(self.get_selected_command(), id="commands")
                 yield self.command_panel
             with Container(id="bottom-right"):
-                self.cart_display = Static("Cart:\n", id="cart-display")  # Use Static for cart
+                self.cart_display = Static("Cart:\n", id="package-cart-display")  # Use Static for cart
                 yield self.cart_display
 
         yield Footer()
     
     BINDINGS=[
-        ("escape", "go_back", "Back to Category Selection"),
+        ("escape", "go_back", "Back to Categories"),
         ("q", "quit", "Quit"),
         ("up", "select_previous", "Select Previous Package"),
         ("down", "select_next", "Select Next Package"),
@@ -95,6 +95,10 @@ class PackageSelectorScreen(Screen):
         ("r", "remove_from_cart", "Remove Package from Cart"),
         ("c", "confirm_selection", "Confirm Selection"),
     ]
+
+    def action_go_back(self) -> None:
+        # Update shared cart before going back
+        self.app.pop_screen()
 
     def action_add_to_cart(self) -> None:
         package_name = list(PACKAGE_DETAILS[self.selected_category].keys())[self.selected_index]
@@ -106,17 +110,19 @@ class PackageSelectorScreen(Screen):
 
     def update_cart(self, package_name: str, add: bool) -> None:
         if add:
-            if package_name not in self.cart:
-                self.cart.append(package_name)
+            if package_name not in SharedCart.items:  # Use SharedCart instead of self.cart
+                SharedCart.add_item(package_name)  # Use SharedCart method
                 self.update_bash_script(package_name, add=True)
         else:
-            if package_name in self.cart:
-                self.cart.remove(package_name)
+            if package_name in SharedCart.items:  # Use SharedCart instead of self.cart
+                SharedCart.remove_item(package_name)  # Use SharedCart method
                 self.update_bash_script(package_name, add=False)
 
-        # Update cart display
-        cart_items = "\n".join(self.cart)
-        self.cart_display.update(f"Cart:\n{cart_items}")  # Update the Static widget
+        self.update_cart_display()
+    
+    def update_cart_display(self) -> None:
+        cart_items = "\n".join(f"- {pkg}" for pkg in SharedCart.get_items())  # Use SharedCart method
+        self.cart_display.update(f"Cart:\n{cart_items}")
 
     def update_bash_script(self, package_name: str, add: bool) -> None:
             # Retrieve the commands for the selected package
@@ -167,6 +173,10 @@ class PackageSelectorScreen(Screen):
         self.app.selected_packages = self.cart  # Pass selected packages to the app
         self.app.show_confirmation_screen()
     
+    def on_mount(self) -> None:
+        """Called when the screen is mounted."""
+        self.update_cart_display()
+
     def action_quit(self) -> None:
         self.app.exit()
 
