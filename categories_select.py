@@ -95,6 +95,7 @@ class CategorySelectScreen(Screen):
         ("up", "select_previous", "Select Previous Category"),
         ("down", "select_next", "Select Next Category"),
         ("enter", "select_category", "Select Category"),
+        ("c", "confirm_selection", "Confirm Selection"),
     ]
 
     def get_selected_category_info(self) -> str:
@@ -133,6 +134,10 @@ class CategorySelectScreen(Screen):
         package_screen = PackageSelectorScreen(selected_category)
         package_screen.selected_distro = self.selected_distro
         self.app.push_screen(package_screen)
+
+    def action_confirm_selection(self) -> None:
+        self.app.selected_packages = self.cart  # Pass selected packages to the app
+        self.app.show_confirmation_screen()
 
     def on_screen_resume(self) -> None:
         """Called when returning to this screen."""
