@@ -1,6 +1,6 @@
 from textual.app import ComposeResult
 from textual.widgets import Footer, Markdown, Static
-from textual.containers import Container, Horizontal, VerticalScroll
+from textual.containers import Container, Horizontal, VerticalScroll, ScrollableContainer
 from textual.screen import Screen
 from textual.reactive import reactive
 from packages import PACKAGE_DETAILS
@@ -59,6 +59,21 @@ class PackageSelectorScreen(Screen):
         grid-gutter: 1;
         background: $panel;
         border: greenyellow;
+        padding: 1;
+    }
+
+    #cart-scroll {
+        height: 100%;
+        padding-right: 0;
+        overflow-y: auto;
+        padding: 0 1 0 1;
+        margin: 0;
+    }
+
+    #package-cart-display {
+        width: 100%;
+        padding: 1;
+        margin-right: 2;
     }
 
     .selected {
@@ -81,8 +96,9 @@ class PackageSelectorScreen(Screen):
                 self.command_panel = Static(self.get_selected_command(), id="commands")
                 yield self.command_panel
             with Container(id="bottom-right"):
-                self.cart_display = Static("Cart:\n", id="package-cart-display")  # Use Static for cart
-                yield self.cart_display
+                with ScrollableContainer(id="cart-scroll"):
+                    self.cart_display = Static("Cart:\n", id="package-cart-display")
+                    yield self.cart_display
 
         yield Footer()
     

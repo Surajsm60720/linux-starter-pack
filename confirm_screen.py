@@ -3,6 +3,7 @@ from textual.app import ComposeResult
 from textual.screen import Screen
 from textual.containers import VerticalScroll, Center
 from textual.reactive import reactive
+from installation_screen import InstallationScreen
 
 class ConfirmationScreen(Screen):
     def __init__(self, selected_packages, script_path):
@@ -30,9 +31,15 @@ class ConfirmationScreen(Screen):
         border: round $primary;
     }
 
-    #status-message {
+    #confirm-instructions {
         text-align: center;
         color: $warning;
+        margin: 1 0;
+    }
+
+    #quit-instructions {
+        text-align: center;
+        color: $text;
         margin: 1 0;
     }
     """
@@ -41,12 +48,12 @@ class ConfirmationScreen(Screen):
         with Center():
             yield Static("Selected Packages for Installation", id="confirm-title")
             yield Static("\n".join(f"- {pkg}" for pkg in self.selected_packages), id="package-list")
-            yield Static("\nPress ENTER to confirm installation\nPress ESC to go back", id="status-message")
-            yield Static("Press 'q' to quit", id="status-message")
+            yield Static("\nPress ENTER to confirm installation\nPress ESC to go back", id="confirm-instructions")  # Changed ID
+            yield Static("Press 'q' to quit", id="quit-instructions")  # Changed ID
 
     def action_confirm(self) -> None:
-        """Run the installation script when Enter is pressed"""
-        self.run_script()
+        """Show the installation screen when Enter is pressed"""
+        self.app.push_screen(InstallationScreen(self.script_path))
 
     def action_go_back(self) -> None:
         """Go back to previous screen when Escape is pressed"""

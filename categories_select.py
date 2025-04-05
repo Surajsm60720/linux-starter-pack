@@ -1,7 +1,7 @@
 from textual.app import ComposeResult
 from textual.screen import Screen
 from textual.widgets import Footer, Markdown, Static
-from textual.containers import Container, VerticalScroll
+from textual.containers import Container, VerticalScroll, ScrollableContainer
 from textual.reactive import reactive
 from categories import CATEGORIES_LIST
 from shared_types import SharedCart
@@ -61,6 +61,21 @@ class CategorySelectScreen(Screen):
         grid-gutter: 1;
         background: $panel;
         border: greenyellow;
+        padding: 1;
+    }
+
+    #cart-scroll {
+        height: 100%;
+        padding-right: 0;
+        margin: 0;
+        overflow-y: auto;
+        padding: 0 1 0 1;
+    }
+
+    #category-cart-display {
+        width: 100%;
+        padding: 1;
+        margin-right: 2;
     }
 
     .selected {
@@ -84,8 +99,9 @@ class CategorySelectScreen(Screen):
                 self.details_panel = Static(self.get_selected_category_info(), id="details")
                 yield self.details_panel
             with Container(id="bottom-right"):
-                self.cart_display = Static("Cart:\n", id="category-cart-display")  # Add a Static widget for the cart
-                yield self.cart_display
+                with ScrollableContainer(id="cart-scroll"):
+                    self.cart_display = Static("Cart:\n", id="category-cart-display")
+                    yield self.cart_display
 
         yield Footer()
 
