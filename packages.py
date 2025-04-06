@@ -225,7 +225,7 @@ PACKAGE_DETAILS = {
     },
 
     "IDEs": {
-        "Visual Studio Code":
+        "VS Code":
             #"Command: sudo snap install code --classic\n"
             "Description:\n"
                 "VS Code is a lightweight yet powerful code editor with built-in Git support, debugging tools, and an extensive extension marketplace. "

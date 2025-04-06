@@ -1,6 +1,6 @@
 from textual.app import ComposeResult
 from textual.screen import Screen
-from textual.widgets import Static, Log
+from textual.widgets import Static, Log, ProgressBar
 from textual.containers import ScrollableContainer
 from textual.message import Message
 import subprocess
@@ -18,12 +18,18 @@ class InstallationScreen(Screen):
     }
 
     #installation-log {
-        height: 90%;
+        height: 85%;  /* Reduced to make room for progress bar */
         border: round $primary;
         padding: 1;
         margin: 1;
         background: $surface;
         color: $text;
+    }
+
+    #progress-bar {
+        height: auto;
+        margin: 1;
+        max-width: 5fr;
     }
 
     #status-message {
@@ -43,10 +49,24 @@ class InstallationScreen(Screen):
         super().__init__()
         self.script_path = script_path
         self.installation_complete = False
+        self.total_commands = self._count_commands()
+        self.current_command = 0
+
+    def _count_commands(self) -> int:
+        """Count the total number of commands in the installation script"""
+        try:
+            with open(self.script_path, 'r') as f:
+                # Count non-empty lines that don't start with # or echo
+                return sum(1 for line in f if line.strip() 
+                         and not line.strip().startswith('#') 
+                         and not line.strip().startswith('echo'))
+        except Exception:
+            return 0
 
     def compose(self) -> ComposeResult:
         yield Static("Installing Packages...", id="installation-title")
-        yield Log(id="installation-log")  # Removed markup parameter
+        yield Log(id="installation-log")
+        yield ProgressBar(total=100, id="progress-bar")
         yield Static("Installation in progress... Press Q to quit", id="status-message")
 
     BINDINGS = [
@@ -57,6 +77,12 @@ class InstallationScreen(Screen):
         """Start the installation when the screen is mounted"""
         self.log_widget = self.query_one("#installation-log")
         threading.Thread(target=self.run_installation, daemon=True).start()
+
+    def update_progress(self) -> None:
+        """Update the progress bar"""
+        if self.total_commands > 0:
+            progress = (self.current_command / self.total_commands) * 100
+            self.query_one("#progress-bar").update(progress=progress)
 
     def run_installation(self) -> None:
         """Run the installation script and capture output"""
@@ -75,10 +101,16 @@ class InstallationScreen(Screen):
                     break
                 if output:
                     self.post_message(self.LogOutput(output.strip()))
+                    # Update progress when command completes (look for sudo or common commands)
+                    if any(cmd in output.lower() for cmd in ['apt', 'dnf', 'pacman','zypper','nix-env', 'installed', 'complete']):
+                        self.current_command += 1
+                        self.update_progress()
 
             return_code = process.poll()
             
+            # Ensure progress bar reaches 100% on successful completion
             if return_code == 0:
+                self.query_one("#progress-bar").update(progress=100)
                 self.post_message(self.LogOutput("\n✅ Installation completed successfully!"))
             else:
                 self.post_message(self.LogOutput(f"\n❌ Installation failed with return code {return_code}"))
