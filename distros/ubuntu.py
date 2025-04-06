@@ -49,12 +49,6 @@ INSTALLATION_COMMANDS = {
     ],
 
     # Networking Tools
-    "Curl": [
-        "sudo apt install -y curl"
-    ],
-    "Wget": [
-        "sudo apt install -y wget"
-    ],
     "Net-tools": [
         "sudo apt install -y net-tools"
     ],

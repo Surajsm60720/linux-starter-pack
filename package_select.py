@@ -5,13 +5,14 @@ from textual.screen import Screen
 from textual.reactive import reactive
 from packages import PACKAGE_DETAILS
 from shared_types import SharedCart
-from distros.ubuntu import INSTALLATION_COMMANDS
+from load_installation_commands import load_installation_commands
 
 class PackageSelectorScreen(Screen):
 
     def __init__(self, selected_category: str) -> None:
         self.selected_category = selected_category
         super().__init__()
+        self.installation_commands = None
 
     selected_distro = ""
     cart = reactive([])
@@ -139,27 +140,25 @@ class PackageSelectorScreen(Screen):
         self.cart_display.update(f"Cart:\n{cart_items}")
 
     def update_bash_script(self, package_name: str, add: bool) -> None:
-            # Retrieve the commands for the selected package
-            package_steps = INSTALLATION_COMMANDS.get(package_name, [])
+        """Update the installation script with the correct commands for the distro"""
+        package_steps = self.installation_commands.get(package_name, [])
 
-            if add:
-                # Append the commands to the script
-                with open(self.app.script_path, "a") as script_file:
-                    for step in package_steps:
-                        script_file.write(f"{step}\n")
-            else:
-                # Remove the package's commands from the script
-                with open(self.app.script_path, "r") as script_file:
-                    lines = script_file.readlines()
-                with open(self.app.script_path, "w") as script_file:
-                    skip = False
-                    for line in lines:
-                        if any(step in line for step in package_steps):
-                            skip = True
-                        elif skip and line.strip() == "":
-                            skip = False
-                        else:
-                            script_file.write(line)
+        if add:
+            with open(self.app.script_path, "a") as script_file:
+                for step in package_steps:
+                    script_file.write(f"{step}\n")
+        else:
+            with open(self.app.script_path, "r") as script_file:
+                lines = script_file.readlines()
+            with open(self.app.script_path, "w") as script_file:
+                skip = False
+                for line in lines:
+                    if any(step in line for step in package_steps):
+                        skip = True
+                    elif skip and line.strip() == "":
+                        skip = False
+                    else:
+                        script_file.write(line)
 
     def get_selected_command(self) -> str:
         package_name = list(PACKAGE_DETAILS[self.selected_category].keys())[self.selected_index]
@@ -188,7 +187,8 @@ class PackageSelectorScreen(Screen):
         self.app.show_confirmation_screen()
     
     def on_mount(self) -> None:
-        """Called when the screen is mounted."""
+        """Load the appropriate installation commands when mounted"""
+        self.installation_commands = load_installation_commands(self.selected_distro)
         self.update_cart_display()
 
     def action_quit(self) -> None:

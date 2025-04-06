@@ -12,3 +12,18 @@ DISTRO_PACKAGE_MANAGERS = {
     "Arch Linux": "pacman",
     "NixOS": "nix-env",
 }
+
+DISTRO_FAMILIES = {
+    "Ubuntu": "debian",
+    "Debian": "debian",
+    "Linux Mint": "debian",
+    "Pop!_OS": "debian",
+    "Zorin OS": "debian",
+    "Fedora Workstation": "fedora",
+    "Nobara": "fedora",
+    "openSUSE": "opensuse",
+    "Manjaro": "arch",
+    "EndeavourOS": "arch",
+    "Arch Linux": "arch",
+    "NixOS": "nix"
+}
