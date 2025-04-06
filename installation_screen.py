@@ -29,7 +29,8 @@ class InstallationScreen(Screen):
     #progress-bar {
         height: auto;
         margin: 1;
-        max-width: 5fr;
+        width: 100vw;
+        align: center middle;
     }
 
     #status-message {
