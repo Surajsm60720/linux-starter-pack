@@ -5,7 +5,6 @@ from textual.screen import Screen
 from textual.reactive import reactive
 from info import DISTRO_FACTS
 from categories_select import CategorySelectScreen
-from shared_types import SharedCart
 
 class DistroOption(Markdown):
     def __init__(self, name: str) -> None:

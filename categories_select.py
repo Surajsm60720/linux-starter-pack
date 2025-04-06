@@ -6,7 +6,6 @@ from textual.reactive import reactive
 from categories import CATEGORIES_LIST
 from shared_types import SharedCart
 from package_select import PackageSelectorScreen
-from distro_package_managers import DISTRO_PACKAGE_MANAGERS
 
 class CategoryOption(Markdown):
     

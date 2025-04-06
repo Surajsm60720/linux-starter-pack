@@ -158,31 +158,6 @@ PACKAGE_DETAILS = {
     },
 
     "Networking": {
-        "curl":
-            #"Command: sudo apt install curl\n"
-            "Description:\n"
-                "cURL is a Command-line tool for transferring data using various network protocols such as HTTP, HTTPS, FTP, and more. "
-                "It is commonly used for API interactions, file downloads, and debugging network issues. "
-                "\n\n🔹 Common Use Cases:\n"
-                "- Downloading files from a remote server\n"
-                "- Testing APIs and web requests\n"
-                "- Fetching web pages via Command-line\n"
-                "\n⚡ Extra Notes:\n"
-                "- Fetch URL: `curl https://example.com`\n"
-                "- Save output: `curl -o file.html https://example.com`",
-        "wget": 
-            #"Command: sudo apt install wget\n"
-            "Description:\n"
-                "wget is a Command-line utility for downloading files from the internet using HTTP, HTTPS, and FTP protocols. "
-                "It supports recursive downloads, resuming interrupted downloads, and downloading entire websites. "
-                "\n\n🔹 Common Use Cases:\n"
-                "- Downloading files directly from the Command line\n"
-                "- Automating downloads in scripts\n"
-                "- Mirroring websites for offline access\n"
-                "\n⚡ Extra Notes:\n"
-                "- Download a file: `wget <URL>`\n"
-                "- Resume a broken download: `wget -c <URL>`\n"
-                "- Download multiple files: `wget -i filelist.txt`",
         "net-tools": 
             #"Command: sudo apt install net-tools\n"
             "Description:\n"

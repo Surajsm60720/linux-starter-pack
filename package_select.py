@@ -4,9 +4,7 @@ from textual.containers import Container, Horizontal, VerticalScroll, Scrollable
 from textual.screen import Screen
 from textual.reactive import reactive
 from packages import PACKAGE_DETAILS
-from distro_package_managers import DISTRO_PACKAGE_MANAGERS
 from shared_types import SharedCart
-from load_installation_commands import load_installation_commands
 from distros.ubuntu import INSTALLATION_COMMANDS
 
 class PackageSelectorScreen(Screen):

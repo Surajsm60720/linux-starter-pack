@@ -1,5 +1,4 @@
-from typing import List, Optional
-from textual.reactive import reactive
+from typing import List
 
 class SharedCart:
     """Shared cart state between screens"""

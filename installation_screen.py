@@ -1,7 +1,6 @@
 from textual.app import ComposeResult
 from textual.screen import Screen
 from textual.widgets import Static, Log, ProgressBar
-from textual.containers import ScrollableContainer
 from textual.message import Message
 import subprocess
 import threading

@@ -1,8 +1,8 @@
 from textual.app import App, ComposeResult
-from textual.widgets import Header, Input, Footer, Markdown, Button, Label, Static
-from textual.containers import VerticalScroll, Center
+from textual.widgets import Footer, Label
+from textual.containers import Center
 from textual.screen import Screen
-from distro import DistroOption, DistroSelectScreen
+from distro import DistroSelectScreen
 import pyfiglet
 from confirm_screen import ConfirmationScreen
 from shared_types import SharedCart

@@ -1,8 +1,7 @@
 from textual.widgets import Static
 from textual.app import ComposeResult
 from textual.screen import Screen
-from textual.containers import VerticalScroll, Center
-from textual.reactive import reactive
+from textual.containers import Center
 from installation_screen import InstallationScreen
 
 class ConfirmationScreen(Screen):
