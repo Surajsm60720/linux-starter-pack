@@ -37,6 +37,10 @@ if ! command -v unzip &> /dev/null; then
     fi
 fi
 
+# Extract the package
+unzip main.zip
+cd linux-starter-pack-main
+
 # Install requirements
 echo "Installing dependencies..."
 python3 -m pip install -r requirements.txt
