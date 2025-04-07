@@ -43,11 +43,6 @@ cd linux-starter-pack-main
 
 # Install requirements
 echo "Installing dependencies..."
-python3 -m pip install -r requirements.txt
-
-# Make the app executable
-chmod +x app.py
+python3 -m pip install --user textual pyfiglet
 
 echo "Installation complete!"
-echo "You can now run Linux Starter Pack by:"
-echo "python3 app.py"
