@@ -19,10 +19,6 @@ if ! command -v python3 &> /dev/null; then
     fi
 fi
 
-# Create temporary directory
-TEMP_DIR=$(mktemp -d)
-cd "$TEMP_DIR"
-
 # Download the package from GitHub
 echo "Downloading Linux Starter Pack..."
 curl -L -o main.zip https://github.com/Surajsm60720/linux-starter-pack/archive/main.zip
@@ -41,10 +37,6 @@ if ! command -v unzip &> /dev/null; then
     fi
 fi
 
-# Extract the package
-unzip main.zip
-cd linux-starter-pack-main
-
 # Install requirements
 echo "Installing dependencies..."
 python3 -m pip install -r requirements.txt
@@ -52,24 +44,6 @@ python3 -m pip install -r requirements.txt
 # Make the app executable
 chmod +x app.py
 
-# Create desktop entry
-echo "Creating desktop entry..."
-cat > ~/.local/share/applications/linux-starter-pack.desktop << EOL
-[Desktop Entry]
-Name=Linux Starter Pack
-Comment=A quick way to install packages in your Linux system
-Exec=python3 $(pwd)/app.py
-Icon=$(pwd)/icon.png
-Terminal=false
-Type=Application
-Categories=Utility;
-EOL
-
-# Create a symbolic link to make it accessible from terminal
-echo "Creating command line access..."
-sudo ln -sf "$(pwd)/app.py" /usr/local/bin/linux-starter-pack
-
 echo "Installation complete!"
 echo "You can now run Linux Starter Pack by:"
-echo "1. Searching for 'Linux Starter Pack' in your applications menu"
-echo "2. Running 'linux-starter-pack' in terminal"
+echo "python3 app.py"
