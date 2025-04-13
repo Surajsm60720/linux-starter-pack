@@ -8,7 +8,7 @@ from confirm_screen import ConfirmationScreen
 from shared_types import SharedCart
 from essential_packages import commands  # Import the essential packages dictionary
 
-ascii_text = pyfiglet.figlet_format("Linux Starter Pack", font = "stop")
+ascii_text = pyfiglet.figlet_format("Linux Starter Pack", font = "doom")
 
 class WelcomeScreen(Screen):
 
