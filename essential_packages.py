@@ -11,6 +11,7 @@ commands = {
 """,
 "Linux Mint": """
     sudo apt update
+    sudo apt install snapd
     sudo apt install -y curl wget
 """,
 "Pop!_OS": """
@@ -66,6 +67,6 @@ commands = {
     sudo pacman -S --noconfirm curl wget
 """,
 "NixOS": """
-    nix-shell -p wget curl
+    nix-env -iA wget curl
 """,
         }

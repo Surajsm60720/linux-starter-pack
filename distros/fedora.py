@@ -4,22 +4,16 @@ INSTALLATION_COMMANDS = {
         "sudo dnf install -y chromium"
     ],
     "Google Chrome": [
-        "sudo dnf install -y fedora-workstation-repositories",
-        "sudo dnf config-manager --set-enabled google-chrome",
         "sudo dnf install -y google-chrome-stable"
     ],
     "Vivaldi": [
-        "sudo dnf config-manager --add-repo https://repo.vivaldi.com/archive/vivaldi-fedora.repo",
-        "sudo dnf install -y vivaldi-stable"
+        "sudo dnf --nogpgcheck -y install ./vivaldi*.rpm"
     ],
     "Opera": [
-        "sudo rpm --import https://rpm.opera.com/rpmrepo.key",
-        "sudo dnf config-manager --add-repo https://rpm.opera.com/rpm",
         "sudo dnf install -y opera-stable"
     ],
     "Brave": [
-        "sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo",
-        "sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc",
+        "sudo dnf config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo",
         "sudo dnf install -y brave-browser"
     ],
 

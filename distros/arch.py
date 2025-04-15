@@ -4,16 +4,19 @@ INSTALLATION_COMMANDS = {
         "sudo pacman -S --noconfirm chromium"
     ],
     "Google Chrome": [
-        "yay -S --noconfirm google-chrome"
+        "git clone https://aur.archlinux.org/google-chrome.git",
+        "cd google-chrome/",
+        "makepkg -s",
+        "sudo pacman -U --noconfirm google-chrome-*.xz"
     ],
     "Vivaldi": [
         "yay -S --noconfirm vivaldi"
     ],
     "Opera": [
-        "yay -S --noconfirm opera"
+        "sudo pacman -S opera"
     ],
     "Brave": [
-        "yay -S --noconfirm brave-bin"
+        "yay -Sy brave-bin"
     ],
 
     # Development Tools

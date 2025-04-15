@@ -1,7 +1,7 @@
 INSTALLATION_COMMANDS = {
     # Web Browsers
     "Chromium": [
-        "sudo zypper install -y chromium"
+        "sudo snap install chromium"
     ],
     "Google Chrome": [
         "sudo zypper addrepo https://dl.google.com/linux/chrome/rpm/stable/x86_64 google-chrome",
@@ -9,19 +9,13 @@ INSTALLATION_COMMANDS = {
         "sudo zypper install -y google-chrome-stable"
     ],
     "Vivaldi": [
-        "sudo zypper addrepo https://repo.vivaldi.com/archive/vivaldi-suse.repo",
-        "sudo zypper refresh",
-        "sudo zypper install -y vivaldi-stable"
+        "sudo zypper --no-gpg-checks --non-interactive install ./vivaldi*.rpm"
     ],
     "Opera": [
-        "sudo zypper addrepo https://rpm.opera.com/rpm",
-        "sudo zypper refresh",
         "sudo zypper install -y opera-stable"
     ],
     "Brave": [
         "sudo zypper addrepo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo",
-        "sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc",
-        "sudo zypper refresh",
         "sudo zypper install -y brave-browser"
     ],
 
