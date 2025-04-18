@@ -1,121 +1,121 @@
 DISTRO_FACTS = {
-    "Ubuntu": """
-    - User-friendly: Ideal for beginners with a polished UI and simple installation.
-    - LTS Releases: Long-term support versions with 5 years of updates.
-    - Extensive Software Support: Large repository with Snap, Flatpak, and AppImage support.
-    - Strong Community Support: Active forums, tutorials, and vast documentation.
-    - Cloud & Server Optimization: Works well with AWS, Azure, and Google Cloud.
-    - Pre-installed Essentials: Comes with productivity apps, drivers, and media codecs.
-    - Wayland Support: GNOME version offers native Wayland for improved performance.
-    - Gaming & AI Ready: Supports Steam, Proton, and AI frameworks like TensorFlow.""",
+    "Ubuntu": """Ubuntu is the welcoming handshake into the world of Linux. Built on the sturdy foundation of Debian, it wraps everything in a user-friendly design that makes transitioning from Windows or macOS feel almost natural. Whether you’re setting up your first Linux system or deploying servers in the cloud, Ubuntu’s balance of usability and power makes it a versatile favorite.
+    What makes it shine:
+    - Uses APT and .deb packages for package management
+    - Snap support allows for containerized apps with bundled dependencies
+    - GNOME desktop offers a clean, modern interface
+    - Long-Term Support (LTS) editions receive updates for 5 years
+    - Extensive community and documentation for troubleshooting anything
+Fun fact: Ubuntu means “humanity to others” in Zulu, which reflects its mission of making Linux accessible to everyone.
+    """,
 
-    "Debian": """
-    - Stability & Reliability: Debian Stable is known for its rock-solid performance, making it ideal for servers and workstations.  
-    - Multiple Branches: Offers Stable, Testing, and Unstable versions, allowing users to choose between stability and cutting-edge software.  
-    - Massive Software Repository: Over 59,000 packages available, covering everything from essential tools to specialized applications.  
-    - Security Focused: Regular security updates and a dedicated team ensure a secure system.  
-    - Cross-Platform Support: Runs on multiple architectures including x86, ARM, PowerPC, and RISC-V.  
-    - Freedom & Open Source: Committed to free software principles, with non-free options available for those who need proprietary drivers.  
-    - Customizable Installation: Offers netinstall, minimal, and full desktop installations with various desktop environments.  
-    - Strong Community & Documentation: Backed by an extensive community and detailed documentation for troubleshooting and learning.""",
+    "Debian": """If Linux distributions were skyscrapers, Debian would be the steel skeleton holding many of them upright. It’s one of the oldest, most trusted Linux bases out there. It values stability over flashiness, which is why it’s a go-to for servers and systems that need to just work — and keep working.
+    What makes it dependable:
+    - APT handles package management with .deb formats
+    - Offers Stable, Testing, and Unstable branches — pick your level of risk
+    - Runs on dozens of architectures from Raspberry Pi to enterprise servers
+    - Highly focused on free software and strict testing of packages
+    - Ideal for both serious server deployment and minimal desktop builds
+Fun fact: Debian powers systems aboard the International Space Station. Now that’s stability you can trust.
+    """,
 
-    "Linux Mint": """  
-    - Windows-like Interface: Familiar UI for Windows users with Cinnamon, XFCE, and MATE versions.
-    - Comes with Codecs: Multimedia support pre-installed for a smooth experience.
-    - Cinnamon Desktop Environment: Modern, lightweight, and highly customizable.
-    - Low System Requirements: Runs smoothly on older hardware.
-    - Timeshift Backup: Simple system restore tool for easy recovery.
-    - No Snap by Default: Uses traditional DEB packages, focusing on stability.
-    - Software Manager: Easy-to-use app store with Flatpak support.
-    - Optimized for Productivity: Works great for office and personal use.""",
+    "Linux Mint": """Linux Mint is like Ubuntu’s friend who knows how to make everything more comfortable. It smooths out rough edges, adds useful features, and delivers a classic desktop experience. It’s perfect for new Linux users who want something reliable, beautiful, and easy to navigate.
+    Why it’s user-friendly:
+    - Uses APT and .deb but avoids Snap for more transparency
+    - Supports multiple desktop environments: Cinnamon, MATE, XFCE
+    - Flatpak integration for modern, secure app installation
+    - Multimedia codecs are included right out of the box
+    - Based on Ubuntu LTS for long-term stability with extra polish
+Fun fact: The Cinnamon desktop was created by Mint’s developers to bring back a more traditional, Windows-like interface.
+    """,
 
-    "Pop!_OS": """
-    - Optimized for Productivity: Tiling window manager for better multitasking.
-    - Built for Developers & Gamers: Pre-installed NVIDIA and AMD drivers.
-    - Minimalist & Clean UI: GNOME-based, but with unique UI tweaks.
-    - Auto-Stacking Windows: Improves workflow efficiency.
-    - Flatpak Pre-installed: Allows access to latest software versions.
-    - Encryption by Default: Security-focused with full-disk encryption.
-    - System76 Support: Developed by a hardware manufacturer with performance tuning.
-    - Rolling Release Model (Upcoming): Future updates will make it semi-rolling.""",
+    "Pop!_OS": """Pop!_OS is Ubuntu’s stylish cousin — dressed for productivity and optimized for performance. Created by System76, it’s built to elevate creative work, programming, and gaming. With native support for NVIDIA and AMD drivers, it’s one of the most plug-and-play distros for modern hardware.
+    What makes it a productivity powerhouse:
+    - APT-based with Flatpak support, Snap optional
+    - Uses a customized GNOME experience (COSMIC)
+    - Comes with tiling window management for efficient multitasking
+    - Great out-of-the-box support for GPUs, AI tools, and developer kits
+    - Designed with creators, coders, and gamers in mind
+Fun fact: Pop!_OS was one of the first distributions to install NVIDIA drivers automatically — no command line required.
+    """,
 
-    "Zorin OS": """
-    - Beginner-Friendly: Designed for users switching from Windows/macOS.
-    - Zorin Appearance: Change layouts to match Windows or macOS.
-    - Fast Performance: Optimized for speed on old and new hardware.
-    - Pre-installed Software: Includes essentials for daily tasks like office tools.
-    - Gaming-Ready: Built-in support for Steam, Lutris, and Wine.
-    - Privacy-Focused: No data tracking or ads.
-    - Lite Version Available: Uses XFCE for lightweight performance on older PCs.
-    - Zorin Connect: Android phone integration for notifications and file sharing.""",
+    "Zorin OS": """Zorin OS feels like Linux dressed in a tailored suit. It’s sleek, beginner-focused, and customizable to feel like Windows or macOS — perfect for anyone making the switch. Beneath the elegant surface, you’ll find Ubuntu’s reliable engine.
+    Why it's conversion-friendly:
+    - Uses APT, supports Snap and Flatpak
+    - Zorin Appearance tool lets you switch between UI layouts
+    - Built-in Wine and PlayOnLinux support for running Windows apps
+    - Offers a lightweight version for older PCs
+    - Excellent fit for schools, home users, and visual perfectionists
+Fun fact: Zorin OS was started by two teenage brothers in Ireland who believed Linux should be as approachable as any mainstream OS.
+    """,
 
-    "Fedora Workstation": """
-    - Cutting-edge Software: Latest GNOME, Kernel, and tools before other distros.
-    - Strong Security Features: SELinux and robust sandboxing for applications.
-    - Flatpak & Wayland Support: Modern packaging and display server.
-    - Red Hat Backing: Enterprise-level reliability and future-ready innovations.
-    - Workstation & Server Editions: Available for different use cases.
-    - No Proprietary Code by Default: Focuses on open-source, but can install proprietary drivers.
-    - dnf Package Manager: Efficient, secure, and supports modular packages.
-    - Immutable Fedora Silverblue Variant: Ideal for container-based development.""",
+    "Fedora Workstation": """Fedora is where Linux goes to try new things. Sponsored by Red Hat, it’s fast-moving, developer-friendly, and often leads the way in adopting bleeding-edge features. If you want to stay current with Linux’s evolution while still enjoying a polished desktop, Fedora’s your playground.
+    Why it’s forward-thinking:
+    - Uses DNF for RPM-based package management
+    - Ships with the newest GNOME releases and the Wayland display server
+    - Flatpak is deeply integrated
+    - New releases every 6 months, always up to date
+    - Ideal for developers, creators, and Linux veterans
+Fun fact: Fedora was the first major distro to switch to Wayland, replacing the decades-old X11 system.
+    """,
 
-    "Nobara": """
-    - Optimized for Gaming: Pre-installed with Proton, Wine, and gaming drivers.
-    - Fedora-Based Stability: Uses Fedora’s core but adds gaming tweaks.
-    - Media Codecs Pre-installed: Plays all formats without extra setup.
-    - Custom Kernel Tweaks: Improves game performance and reduces latency.
-    - Optimized for AMD & NVIDIA: Works out-of-the-box for gaming hardware.
-    - Flatpak & AppImage Support: Ready for modern software distribution.
-    - Streamlined Installer: Simple setup with user-friendly defaults.
-    - Works for Creative Professionals: Supports Blender, DaVinci Resolve, and multimedia tools.""",
+    "Nobara": """Nobara is what happens when Fedora meets gaming. Built with content creators and gamers in mind, it removes the post-install hassle of setting up tools like OBS, Wine, and drivers — all the tweaks you’d normally have to Google are already done.
+    Why gamers love it:
+    - Based on Fedora, uses DNF and RPM
+    - OBS Studio, Steam, Wine GE, and codecs come pre-installed
+    - Game-ready kernel tweaks for performance
+    - Optimized for streaming, emulation, and modding
+    - Still has all of Fedora’s speed and tech under the hood
+Fun fact: Nobara is developed by the creator of Proton GE, a major contributor to the Linux gaming revolution.
+    """,
 
-    "NixOS": """
-    - Declarative System Configuration: System setup is defined in a single configuration file, making it reproducible and easy to manage.  
-    - Atomic Upgrades & Rollbacks: System updates are transactional, allowing users to roll back to previous states if needed.  
-    - Immutable Root Filesystem: The base system remains unchanged unless explicitly configured, enhancing security and consistency.  
-    - Reproducible Builds: Ensures that installations are identical across different machines, making it ideal for DevOps and server environments.  
-    - Nix Package Manager: A powerful package management system that avoids dependency conflicts through isolated environments.  
-    - Multi-User Package Management: Allows different users to have separate package environments without affecting the system globally.  
-    - Minimal Base System: Comes with only essential software, letting users customize the system as they see fit.  
-    - Strong Community & Documentation: Supported by an active community and extensive documentation for both new and advanced users.""",
+    "NixOS": """NixOS is the rule-breaker of the bunch. It treats system configuration like code — literally. Every detail, from installed packages to services, lives inside a configuration file. Want to rebuild or revert your system? One command does it. It’s automation-heavy, reproducible, and perfect for power users and DevOps lovers.
+    What makes it unique:
+    - Uses the Nix package manager with fully isolated builds
+    - System state is declared in a single file
+    - Atomic upgrades and rollbacks built into the core
+    - Enables reproducible environments for development and deployment
+    - Supports Linux containers, virtual machines, and more
+Fun fact: In NixOS, even the kernel version can be rolled back with a single command. Mistakes are temporary.
+    """,
 
-    "openSUSE": """
-    - Two Versions: Leap (stable, enterprise-grade) and Tumbleweed (rolling release).
-    - YaST Control Center: Centralized system administration tool.
-    - Enterprise-Level Stability: Used in corporate environments.
-    - Strong Security: Includes AppArmor, Btrfs snapshots, and secure boot options.
-    - Zypper Package Manager: Reliable dependency handling with great performance.
-    - Btrfs & XFS Support: Advanced file systems for reliability and performance.
-    - Works for Developers: Great for coding, AI/ML, and embedded systems.
-    - Rolling Release Option: Tumbleweed is cutting-edge, yet stable.""",
+    "openSUSE": """openSUSE gives you a choice: stability with Leap or bleeding-edge with Tumbleweed. It’s highly customizable, feature-rich, and known for its powerhouse tool YaST — a one-stop control center for managing your entire system.
+    Why it’s versatile:
+    - Uses Zypper and RPM packages
+    - YaST offers GUI tools for network, partitioning, services, and more
+    - Leap shares a codebase with SUSE Linux Enterprise, great for production
+    - Tumbleweed is a tested rolling release for cutting-edge users
+    - Built-in support for Btrfs snapshots and rollback
+Fun fact: YaST is so robust, some sysadmins swear by it for managing large-scale enterprise environments.
+    """,
 
-    "Manjaro": """
-    - User-friendly Arch: Simplifies Arch installation with a graphical installer.
-    - Hardware Detection: Auto-installs required drivers, including proprietary ones.
-    - Stable Rolling Release: Updates go through testing before being released.
-    - Multiple Desktop Environments: KDE, XFCE, GNOME editions available.
-    - Pamac Package Manager: Easy GUI-based software installation.
-    - AUR Access: Supports Arch User Repository with additional software.
-    - Flatpak, Snap, and AppImage Support: Access to all major package formats.
-    - Minimal & Full ISO Options: Choose a lightweight or feature-rich version.""",
+    "Manjaro": """Manjaro makes the power of Arch Linux accessible to everyone. It provides the cutting-edge updates of Arch without the steep learning curve. This rolling release distro is optimized for performance and designed for ease of use.
+    Why it's user-friendly:
+    - User-friendly Arch: Simplifies Arch installation with a graphical installer
+    - Hardware Detection: Auto-installs required drivers, including proprietary ones
+    - Stable Rolling Release: Updates go through testing before being released
+    - Multiple Desktop Environments: KDE, XFCE, GNOME editions available
+    - Pamac Package Manager: Easy GUI-based software installation
+Fun fact: Manjaro gives you the power of Arch with the usability of a beginner-friendly distro.
+    """,
 
-    "EndeavourOS": """  
-    - Close to Pure Arch: Simple, lightweight, and minimalistic.
-    - Community-Driven: Excellent support forums and Arch Wiki resources.
-    - Graphical Installer: No need for manual Arch setup (Calamares installer).
-    - Rolling Release Model: Always up to date with the latest packages.
-    - Xfce Default, but Customizable: Choose your preferred DE after installation.
-    - AUR Support: Access to Arch’s massive software repository.
-    - Minimal Bloatware: Only necessary software installed.
-    - Great for Advanced Users: Encourages learning by doing.""",
+    "EndeavourOS": """EndeavourOS is like Arch Linux with a little hand-holding. It’s simple, minimal, and ideal for users who want the flexibility of Arch without the steep learning curve. A great starting point for Arch users who want to explore the full potential of the Arch ecosystem.
+    Why it's Arch-like:
+    - Close to Pure Arch: Simple, lightweight, and minimalistic
+    - Community-Driven: Excellent support forums and Arch Wiki resources
+    - Graphical Installer: No need for manual Arch setup (Calamares installer)
+    - Rolling Release Model: Always up to date with the latest packages
+    - Xfce Default, but Customizable: Choose your preferred DE after installation
+Fun fact: EndeavourOS has one of the most helpful and vibrant communities in the Arch ecosystem.
+    """,
 
-    "Arch Linux": """
-    - Minimalist & Customizable: Install only what you need, no unnecessary bloatware.
-    - Rolling Release Model: Always up to date with the latest packages.
-    - Pacman Package Manager: Fast and efficient package management.
-    - AUR (Arch User Repository): Community-driven repository with thousands of extra packages.
-    - Arch Wiki: One of the best documentation resources in the Linux world.
-    - Manual Installation: Gives full control over system setup and configuration.
-    - Lightweight & Performance-Oriented: Uses fewer system resources, great for power users.
-    - Wayland & PipeWire Support: Modern display and audio systems included.""",
+    "Arch Linux": """Arch Linux is for Linux power users who want to craft their systems from the ground up. It’s minimal, lightweight, and doesn’t hold your hand — the installation process is entirely up to you. If you want total control over your system, Arch is the ultimate platform.
+    Why it’s for power users:
+    - Minimalist & Customizable: Install only what you need, no unnecessary bloatware
+    - Rolling Release Model: Always up to date with the latest packages
+    - Pacman Package Manager: Fast and efficient package management
+    - AUR (Arch User Repository): Community-driven repository with thousands of extra packages
+    - Arch Wiki: One of the best documentation resources in the Linux world
+Fun fact: The Arch Wiki is so comprehensive that it’s often cited as a primary resource even by users of other Linux distros.
+    """
 }
